@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+
+	<link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
+
+	<script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+        // Now safe to use the PhoneGap API
+		document.getElementById("app").style.display = "initial";
+    }
+    </script>
+
+	<title>Kolonialisme dan Imperialisme Bangsa Eropa</title>
+</head>
+<body>
+	<audio autoplay loop>
+	   <source src="sound/backsound.mp3" type="audio/mpeg" />
+	</audio>
+    <div id="app" style="display:initial;">
+		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
+      		<script type="text/JavaScript">
+      			setTimeout("location.href = '#Welcome-page';",5000);
+      		</script>
+      	</div><!-- end Page--> 
+		
+		<!-- Welcome Page -->
+		<div id="Welcome-page" data-role="page" class="bg-welcome" style="text-align: center;"> 
+				<img src="img/uny.png"  style="width: 150px; display:block; margin: 20px auto;"/>
+				<h3>Selamat Datang</h3>
+				<h1>Di Media Pembelajaran</h1>
+				<h2>Kolonialisme dan Imperialisme Bangsa Eropa</h2>
+				<br/>
+					<!--<a data-theme="b" href="#" onclick="VideoPlayer.play('file:///android_asset/www/vid/apersepsi.mp4')" data-role="button" data-icon="flat-video">Lihat Video</a>-->
+				<center><a href="#home-page" data-theme="d"  data-role="button" data-inline="true" data-icon="arrow-r">Masuk</a></center>
+		</div>
+				    
+        <!-- Home Page -->
+		<div id="home-page" data-role="page">
+			<img src="img/Icon%20Materi/header.jpg" style="width:100%">
+            <div data-role="content" >
+				<div id="menu">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a href="#silabus-page"  >
+								<img src="img/Icon%20Materi/1%20Silabus%20(1).png" alt="">
+								<h2><b>KOMPETENSI</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a href="#Materi-page"  >
+								<img src="img/Icon%20Materi/3%20Materi.png" alt="">
+								<h2><b>MATERI</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a href="#evaluasi-page" onmousedown="resetSoal()">
+								<img src="img/Icon%20Materi/2%20kuis.png" alt="">
+								<h2><b>EVALUASI</b></h2>
+							</a>
+						</li>		
+						<li class="btn-menu-utama">
+							<a href="#about-page"  >
+								<img src="img/Icon%20Materi/4%20profil.png"  alt="">
+								<h2><b>PROFIL</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a href="#help-page"  >
+								<img src="img/Icon%20Materi/5%20help.png" alt="">
+								<h2><b>BANTUAN</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-merah">
+							<a href="#exit-page">
+								<img src="img/Icon%20Materi/6%20exit.png" alt="">
+								<h2><b>EXIT</b></h2>
+							</a>
+						</li>
+					</ul>			
+                </div>
+            </div>
+        </div><!-- /page  -->
+		
+		<div  id="exit-page" data-role="page" style="background-image: url('img/Icon%20Materi/background%20soal.jpg'); background-size: 100% 100%;background-repeat: no-repeat;">
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center>
+					<div style="margin:auto;">
+						<div class="ui-corner-all custom-corner" style="width:100%">
+							<div data-role="header">
+								<h3>Konfirmasi</h3>
+							</div>
+							<div data-role="content" style="background-color: rgba(255,255,255,0.7);">
+								<p style="text-align: center;"><b>Kamu yakin akan keluar dari aplikasi ini?</b></p>
+								<a href="#home-page" data-role="button" class="ui-btn-inline" data-theme="b">tidak</a>
+								<a href="#" data-role="button" class="ui-btn-inline" onclick="navigator.app.exitApp()" data-theme="d">ya</a>
+							</div>
+						</div>
+					</div>
+				</center>
+			</div>
+		</div>
+
+		<div  id="Materi-page" data-role="page">
+			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1>Materi</h1>
+			</div>
+			<img src="img/Icon%20Materi/header.jpg" style="width:100%">
+			<div data-role="content" align="center">
+				<!-- Isi konten di sini -->
+				<div id="menu" style=" font-size: 12px; vertical-align: center;">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#sejarah-page"  >
+								<img src="img/Icon%20Materi/m-2-4.png" alt="">
+								<h2><b>Materi 1</b></h2>
+								<p>Sejarah</p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">											
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#Materi-page1" >
+								<img src="img/Icon%20Materi/m-2-1.png" alt="">
+								<h2>Materi 2</h2>
+								<p>Faktor Pendorong</p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#kedatangan-page"  >
+								<img src="img/Icon%20Materi/m-3.png" alt="">
+								<h2>Materi 3</h2>
+								<p>Kedatangan Bangsa-Bangsa Eropa</p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#Materi-page2"   >
+								<img src="img/Icon%20Materi/m-4.png" alt="">
+								<h2>Materi 4</h2>
+								<p>Masa Kolonial dan Imperialisme</p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#Materi-page3"   >
+								<img src="img/Icon%20Materi/m-5.png" alt="">
+								<h2>Materi 5</h2>
+								<p>Perlawanan Rakyat</p>
+							</a>
+						</li>																	
+					</ul>                       
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+
+		<div  id="Materi-page1" data-role="page">
+			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1>Faktor Pendorong</h1>
+			</div>
+			<img src="img/Icon%20Materi/header.jpg" style="width:100%">
+			<div data-role="content" align="center">
+				<!-- Isi konten di sini -->
+				<div id="menu" style=" font-size: 12px; vertical-align: center;">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#daya-tarik-page"  >
+								<img src="img/Icon%20Materi/m-2-1.png" alt="">
+								<h2><b>Daya Tarik Indonesia (Rempah-Rempah)</b></h2>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">											
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#motivasi-3g-page" >
+								<img src="img/Icon%20Materi/m-2-2.png" alt="">
+								<h2>Motivasi 3G</h2>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#konstantinopel-page"  >
+								<img src="img/Icon%20Materi/m-2-3.png" alt="">
+								<h2>Jatuhnya Konstantinopel</h2>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#semangat-ilmu-page"   >
+								<img src="img/Icon%20Materi/m-2-4.png" alt="">
+								<h2>Semangat Ilmu Pengetahuan</h2>
+								<p></p>
+							</a>
+						</li>																
+					</ul>                       
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+
+		<div  id="Materi-page2" data-role="page">
+			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1>Masa Kolonialisme dan Imperialisme</h1>
+			</div>
+			<img src="img/Icon%20Materi/header.jpg" style="width:100%">
+			<div data-role="content" align="center">
+				<!-- Isi konten di sini -->
+				<div id="menu" style=" font-size: 12px; vertical-align: center;">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#masa-belanda-1-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3><b>Masa Hindia Belanda I dan Kerja Paksa</b></h3>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">											
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#masa-inggris-page" >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Masa Pemerintahan Inggris dan Sistem Sewa Tanah</h3>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#masa-belanda-2-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Masa Hindia Belanda II dan Tanam Paksa</h3>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#liberal-page"   >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Sistem Kolonial Liberal dan Undang-Undang Agraria</h3>
+								<p></p>
+							</a>
+						</li>																	
+					</ul>                       
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+
+		<div  id="Materi-page3" data-role="page">
+			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1>Perlawanan Rakyat</h1>
+			</div>
+			<img src="img/Icon%20Materi/header.jpg" style="width:100%">
+			<div data-role="content" align="center">
+				<!-- Isi konten di sini -->
+				<div id="menu" style=" font-size: 12px; vertical-align: center;">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#saparua-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Saparua</h3>
+								<p></p>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#padri-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Padri</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#diponegoro-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Diponegoro</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#aceh-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Aceh</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#sisingamangaraja-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Sisingamangaraja</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#banjar-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Banjar</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#jagaraga-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Jagaraga Bali</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#sosial-page"  >
+								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<h3>Perlawanan Sosial</h3>
+								<p></p>
+							</a>
+						</li>																
+					</ul>                       
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="template-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Sejarah Kedatangan</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Sejarah Kedatangan Bangsa Eropa di Indonesia</h2>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="sejarah-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Sejarah Kedatangan</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Sejarah Kedatangan Bangsa Eropa di Indonesia</h2>
+				<p>Hindia Timur atau Indonesia telah lama dikenal sebagai daerah penghasil rempah-rempah. Rempah-rempah digunakan untuk mengawet makanan, bumbu masakan, bahkan obat. Karena kegunaannya, rempah-rempah sangat laku di pasaran dan harganya pun mahal. Hal ini mendorong para pedagang Asia Barat datang dan memonopoli perdagangan rempah-rempah. Mereka membeli bahan-bahan ini dari para petani di Indonesia dan menjualnya kepada para pedagang Eropa.</p>
+				<p>Jatuhmnya Konstantinopel pada tahun 1453 ke Turki Utsmani mengakibatkan pasokan rempah-rempah ke wilayah Eropa terputus. Hal ini dikarenakan boikot yang dilakukan oleh Turki Utsmani. Situasi ini mendorong orang-orang Eropa menjelajahi jalur pelayaran ke wilayah yang banyak memiliki bahan rempah-rempah, termasuk kepulauan Nusantara (Indonesia). Dalam perkembangannya, mereka berdagang,dan menguasai sumber rempah-rempah di negara penghasil.</p>
+				<p>Perjanjian Tordesillas merupakan awal penjelajahan bangsa eropa untuk mengelilingi samudra di dunia salah satunya Indonesia. Perjanjian Tordesilllas merupakan perjanjian yang berlangsung ditandatangani di Tordesillas, Spanyol pada 7 Juni 1494. Perjanjian ini berisi bahwa di dunia luar Eropa menjadi kekuasaan eksklusif dua bangsa yaitu Spanyol dan Portugal, yang bermulai pada barat kepulauan Tanjung Verde. Untuk wilayah sebelah timur dimiliki oleh Portugis sedangkan sebelah barat oleh Spanyol. Perjanjian tersebut disahkan Spanyol pada 2 Juli sedangkan untuk Portugis pada 5 September 1494.</p>
+				<p>Perjanjian Tordesillas ditandatangani pada 9 Jun 1494 oleh pihak gereja dalam perjanjian tersebut dunia dibagi menjadi dua wilayah kawasan ke Timur adalah milik Portugal, sedangkan kawasan ke Barat adalah milik Sepanyol. Perjanjian Tordesillas yaitu berisi pembagian wilayah pelayaran antara kerajaan Spanyol dengan kerajaan Portugis. Dalam perjanjian ini menjelaskan bahwa kerajaan Spanyol memiliki memiliki wewenang berdagang dan berlayar ke arah barat, sedangkan untuk Portugis berlayar ke arah timur. Perjanjian ini diberlakukan pada tanggal 4 Juni 1474 sampai 13 Januari 1750. Sesuai dengan perjanjian tersebut pelaut bangsa Portugis mencari jalan berlayar ke arah timur untuk mencari rempah-rempah, untuk para pedagang Spanyol berlayar kearah barat yaitu daerah Benua Amerika. Dengan adanya perjanjian Tordesillas berdampak dikenalnya dengan semboyan 3G yaitu gospel, gold, dan glory. Gospel merupakan semboyan yang dibawa penjelajah samudera bukan hanya berdagang dan memperluas wilayah juga menyebarkan agama Kristen.</p>
+				<p>Secara umum, kedatangan bangsa Eropa ke Asia termasuk ke Indonesia dilandasi keinginan mereka untuk berdagang dan menyebarkan agama. Sebab dan tujuan bangsa Eropa ke dunia Timur sebagai berikut :
+				<ol>
+					<li>Mencari kekayaan termasuk berdagang</li>
+					<li>Menyalurkan jiwa penjelajah</li>
+					<li>Meyakini Keberadaan Prester John</li>
+					<li>Menyebarkan agama</li>
+					<li>Mencari kemuliaan bangsa</li>
+				</ol>
+				</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="daya-tarik-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Daya Tarik Indonesia</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Daya Tarik Indonesia (Rempah-rempah)</h2>
+				<a data-theme="b" href="#" onclick="VideoPlayer.play('file:///android_asset/www/vid/rempah.mp4')" data-role="button" data-icon="flat-video">Lihat Video</a>
+				<p>Selama musim dingin di Eropa pada abad ke 15, ada beberapa jenis hewan ternak yang tidak mampu hidup dalam suhu dingin yang tinggi. Untuk menghindari kematian hewan ternak yang sia-sia maka untuk jenis hewan ternak tertentu harus dipotong. Oleh karena itu, jalan yang diambil adalah dengan cara memotong dan mengawetkannya. Pengawetan daging hewan yang dilakukan menggunakan garam dan rempah-rempah. Rempah-rempah harus diimpor dari belahan bumi lain. Rempah-rempah Indonesia menjadi komoditi yang sangat laku di Eropa. Cengkih dari Indonesia timur adalah rempahrempah yang paling berharga disusul lada, buah pala, dan bunga pala ( M.C Ricklefs, 2008: 41). Lokasi Indonesia yang dilewati oleh garis Khatulistiwa menyebabkan Indonesia memiliki iklim tropis. Iklim tropis memiliki dua musim yaitu, musim penghujan dan kemarau. Dengan adanya dua musim di Indonesia sangat memungkinkan berbagai tanaman mudah tumbuh dan berkembang. Untuk tanaman kebutuhan sehari-hari dapat ditanam di setiap waktu, hal ini berbeda dengan bangsa-bagsa Eropa yang memiliki empat musim yakni musim panas, musim dingin, musim semi dan musim gugur. Dengan adanya perbedaan iklim antara Indonesia dan Eropa mengakibatkan kebutuhan rempah-rempah di Eropa meningkat. Rempah-rempah Indonesia yang menjadi komoditi unggulan antara lain; cengkeh, kemiri, merica, dan kayu manis.</p>
+				<figure>
+					<img src="img/materi/image1.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Rempah-rempah Indonesia komoditas paling laku di Eropa (Kayu manis, Kemiri, Merica, dan Cengkeh)</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="motivasi-3g-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Motivasi 3G (Gold, Glory dan Gospel)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Motivasi 3G (Gold, Glory dan Gospel)</h2>
+				<p>Tiga semangat perjalanan bangsa-bangsa Eropa yang terkenal dengan 3G yaitu Gold, Glory dan Gospel ( M. Hisyam dan A.M.D. Suroyo, 2012: 175). Gold secara harfiah berarti emas, namun disisi lain orang Eropa secara khusus mencari rempah-rempah yang merupakan sumber kekayaan yang sangat penting dan laku dipasaran Eropa. Motif kedua bangsa Eropa adalah Glory atau kejayaan. Setelah mendapatkan daerah rempah-rempah, bangsa Eropa mempunyai idealisme penguasaan daerah tersebut guna mencapai kejayaan. Setelah mendapatkan kekayaan dan kejayaan, bangsa Eropa menyebarkan agama Nasrani (Gospel) di daerah jajahannya. Franciscus Xaveius dan Santo Ignatius de Loyola merupakan misionaris Eropa yang berasal dari Portugis dan bertugas menyebarkan agama Katholik di Indonesia bagian timur meliputi Ambon, Ternate dan Morotai ( M. Hisyam dan A.M.D. Suroyo, 2012: 176)..</p>
+				<figure>
+					<img src="img/materi/image2.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Penyebaran agama Nasrani di kepulauan Maluku oleh Franciscus Xaverius dan Santo Ignatius de Loyola </figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="konstantinopel-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Jatuhnya Konstantinopel</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Jatuhnya Konstantinopel</h2>
+				<p>Eropa bukanlah kawasan yang paling maju di dunia pada permulaan abad XV, juga bukan merupakan kawasan yang paling dinamis. Kekuatan besar yang sedang berkembang di dunia saat itu adalah Islam. Pada tahun 1453, orang-orang Turki Utsmani menaklukan Konstantinopel dan agama ini berkembang hingga sampai Asia Tenggara (M.C. Ricklefs, 2008: 40). Pengaruh kejayaan Islam ketika itu menyebabkan sebagian besar kota-kota pelabuhan di Afrika dan Asia dikuasai oleh para pedagang Islam. Pengetahuan mengenai jalur perdagangan dan tempat-tempat produksi juga tetap dirahasiakan oleh kekuasaan-kekuasaan Islam. Dengan dominasi Islam yang sangat kuat di sekitar pelabuhan Afrika dan Asia, membuat Portugis kala itu harus berusaha mencari jalan sendiri melalui laut untuk ke Afrika dan Asia meskipun harus melawan kota-kota pelabuhan Islam (M.D. Poesponegoro & N. Sutanto, 2008: 13).</p>
+				<figure>
+					<img src="img/materi/image3.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Wilayah kekuasaan Turki Utsmani</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="semangat-ilmu-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Semangat Ilmu Pengetahuan </h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Semangat Ilmu Pengetahuan </h2>
+				<p>Ilmu pengetahuan yang mulai dirintis pada akhir abad pertengahan menimbulkan perubahan besar dan cepat (revolusi). Hal tersebut diperlihatkandengan munculnya penemuan Nicolaus Copernicus dengan teori Heliosentris dimana matahari merupakan pusat tata surya. Teori Heliosentris tersebut didukung oleh ilmuwan dari Italia Galileo Galilei yang menemukan teleskop sebagai alat untuk melihat gugusan bintang sebagai acuan untuk berlayar (Wahjudu Djaja, 2012: 133).</p>
+				<p>Kemajuan ilmu astronomi beriringan dengan kemajuan teknologi dalam dunia pelayaran, hal ini membawa bangsa Portugis berada dalam masa petualangan samudera. Penggunaan kompas mulai digunakan dan juga peta portolan (peta yg dilengkapi dengan jalur pelayaran, serta letak pelabuhan-pelabuhan dan perbintangan. (M.D. Poesponegoro & N. Sutanto, 2008: 11). Dengan bekal pengetahuan geografi dan astronomi dari bangsa Arab melalui sarjana-sarjana Kristen dan Yahudi, bangsa Portugis memulai penjelajahan samudera yang paling berani pada masa tersebut.</p>
+				<figure>
+					<img src="img/materi/image4.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Teknologi kapal layar bangsa Portugis</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="kedatangan-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Kedatangan bangsa-Bangsa Barat ke Indonesia</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Kedatangan bangsa-Bangsa Barat ke Indonesia</h2>
+				<p>Secara umum, kehadiran pertama orang-orang Eropa di Asia dan perairan Indonesia pada sekitar abad XVI-XVII dapat dipandang sebagai periode awal petualangan, penjelajahan, dan ekspansi “imperium maritim barat” ke dunia luar Eropa yag bertujuan untuk mendirikan koloni baru dan mencari sumber komoditas perdagangan yang menguntungkan bagi negeri asalnya. Era ekspansi imperium barat mencapai puncaknya ketika bangsa Eropa yang meliputi Portugal, Belanda, Inggris, Perancis serta negara Amerika berhasil melakukan perdagangan bahkan ada yang sampai membangun kekuasaan maritim dan meluaskan pengaruhnya di berbagai belahan dunia (Djoko Surjo, 2012: 1).</p>
+				<figure>
+					<img src="img/materi/image5.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Rute pelayaran bangsa Eropa</figcaption>
+				</figure>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="a">
+					<h3>Portugis</h3>
+					<p>Bangsa Eropa pertama yang berhasil melakukan penjelajahan laut sampai kawasan Asia adalah Portugis. Hal tersebut dikarenakan bangsa Portugis tidak memiliki kekayaan agraris, sehingga mereka memanfaatkan laut sebagai mata pencaharian yang utama dalam bidang perikanan dan perdagangan (M.D. Poesponegoro & N. Sutanto, 2008: 11). Pelayaran pertama bangsa Portugis hanya terbatas di laut tengah tetapi hal ini berubah ketika memasuki abad ke 15 ketika bangsa Portugis mulai mengembangkan teknologi maritim. Inovasi kapal carravel dengan dua sampai tiga tiang layar yang dapat digunakan lintas benua. Tahun 1486, Bartolomeo Diaz melakukan pelayaran pertama menyusuri pantai barat Afrika. Tujuan pelayarannya adalah ke tanah India tetapi gagal dalam perjalanannya. Perjalan selanjutnya Portugis mencapai Malaka tahun 1511 di bawah pimpinan Alfonso d‟Albuquerque, setelah berhasil menguasi Malaka bangsa Portugis memasuki wilayah Nusantara dan pada tahun 1512 bangsa Portugis telah berhasil sampai Maluku (R.Z. Leiriza, 2012:13).</p>
+					<figure>
+						<img src="img/materi/image6a.png" style="width: 100%; max-width: 600px;" title=""/>
+						<figcaption>Bartolomeo Diaz dan Alfonso d‟Albuquerque</figcaption>
+					</figure>
+					<p>Dengan menguasai Malaka, Portugis berhasil mengendalikan perdagangan rempah-rempah (lada di Sumatera dan Sunda Kelapa, cengkeh dari Maluku Utara, Pala, Kulit Biji Pala dari kepulauan Banda. Tahun 1512 Albuquerque mengirim sebuah armada yang terdiri dari tiga buah kapal untuk mencari daerah produksi cengkeh di Maluku. Sebagai pusat produksi dan perdagangan rempah-rempah, kepulauan Maluku menjadi sasaran kedatangan orang Portugis pertama. Mereka datang pada tahun 1512 di Hitu untuk membeli cengkih dan pala. Mereka bertempat tinggal di pantai Hatiwi dan Tawari yang penduduknya belum memeluk Islam (Muhammad Hisyam, 2012: 176).</p>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="a">
+					<h3>Perancis</h3>
+					<p>Perancis merupakan salah satu negara Eropa yang pernah melakukan kontak dagang dengan masyarakat Indonesia. Armada Perancis yang berangkat dari Diepe dengan tujuan mencari emas tiba pada tahun 1529 di pantai barat Sumatera. Keberhasilan Perancis berlayar menuju pantai barat Sumatera dipimpin oleh Jean Permentier. Tercatat ada dua kota yang menjadi tempat singgah pedagang Perancis yaitu, lota Tiku dan Indrapura (Uka Tjandrasasmita, 2012: 50). Penjelajahan samudera yang dilakukan oleh Perancis berbeda dengan pelayaran yang dilakukan oleh bangsa Eropa lainnya. Untuk mencapai Sumatera, rombongan kapal Perancis memotong jalur melalui Tanjung Harapan lalu masuk ke samudera Hindia, sehingga muncul pola pelayaran Tanjung Harapan-Samudera Hindia-Indonesia. Rute yang digunakan merupakan rute baru dimana pelaut-pelaut Eropa biasanya menggunakan jalur Tanjung Harapan-Pantai Timur Benua Afrika-Jazirah Arab-India-Selat Malaka-Indonesia.</p>
+					<figure>
+						<img src="img/materi/image6b.png" style="width: 100%; max-width: 600px;" title=""/>
+						<figcaption>Jean Permentier pemimpin kapal perdagangan Perancis</figcaption>
+					</figure>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="a">
+					<h3>Inggris</h3>
+					<p>Persekutuan dagang EIC (<i>East Indian Company</i>) adalah gabungan dari pengusaha Inggris yang melakukan perdagangan dikawasan Asia. Kawasan perdagangan EIC lebih dominan dilakukan di India dan sekitarnya. Pengaruh Inggris di Indonesia tidak teralalu banyak seperti halnya Belanda. Hal ini disebabkan EIC terdesak oleh Belanda, sehingga Inggris menyingkir ke India/Asia Selatan dan Asia Timur. Kontak pertama Inggris dengan Indonesia terjadi ketika Sir Francis Drake tiba di wilayah Indonesia sekitar tahun 1577-1580. Pulau Ternate merupakan daerah yang dia tuju untuk pertama kali, setelah melakukan hubungan perdagangan, Sir Francis Drake kembali ke Inggris dengan muatan cengkih ( M.C Ricklefs, 2008: 54). Penjelajahan samudera yang dilakukan oleh Inggris dilatarbelakangi oleh beberapa faktor yang terjadi di Eropa, perang Belanda –Spanyol telah mengacaukan arus rempah-rempah melalui jalur Artwep, sedangkan perdagangan Inggris dengan Suriah dikacaukan oleh gangguan Spanyol dan Portugis di selat Gibraltar. Dengan kondisi Eropa yang tidak menguntungkan Inggris, pada tahun 1591 Ratu Elizabeth I mendukung usaha pertama Inggris untuk terlibat secara langsung dalam perdagangan rempah-rempah. Ratu Elizabeth mengutus dua orang kepercyaannya Sir James Lancester (orang Inggris yang berpengalaman di Lisbon) dan George Raymond untuk melakukan pelayaran pada tahun tersebut. Pelayaran awal Inggris menuju Indonesia ini mendapat bencana dimana kapal George Raymond tenggelam dan munculnya wabah penyakit yang menyebabkan kematian pada kru kapal. Lancester berhasil mencapai Aceh dan Penang, namun dalam perjalan pulang ke negaranya, dia terdampar di kepulauan Hindia Barat dan baru sampai Inggris pada tahun 1594 dengan pertolongan perampok Perancis. Setelah insiden Lancester dan George Raymond, masyarakat Inggris sempat meragukan kemampuan penjelajahan laut Inggris tersebut. Mendengar kabar keuntungan besar yang diperoleh Belanda melalui perdagangan rempah-rempah dari Asia, pada tahun 1600 ratu Elizabeth I memberi Oktroi kepada maskapai Hindia Timur (EIC), dan setelah itu mulailah Inggris mendapat kemajuan di Asia. Sir James Lancester ditunjuk kembali untuk memimpin pelayaran ke Indonesia. Pada bulan Juni tahun 1602 dia berhasil sampai di Aceh dan terus bergerak menuju Banten tempat penghasil lada terbesar di Jawa. Dua tahun kemudian tepatnya pada tahun 1604 pelayaran kedua EIC dipimpin oleh Sir Henry Middleton berhasil mencapai Ternate, Tidore, Ambon, dan Banda. Akan tetapi Inggris mendapat perlawanan dari VOC yang menerapakan sistem monopoli rempah-rempah di Maluku.</p>
+					<figure>
+						<img src="img/materi/image7.png" style="width: 100%; max-width: 600px;" title=""/>
+						<figcaption>Sir Henry Middleton dan Perusahaan Dagang Inggris</figcaption>
+					</figure>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="a">
+					<h3>Belanda</h3>
+					<p>Jalan laut ke arah timur (Asia) dilakukan bangsa Belanda sejak akhir abad ke 16 karena berhasil memperoleh peta-peta dan informasi ke timur dari bangsa Italia (Venesia) yang banyak berjasa membuat peta ke Timur yang kemudian digunakan oleh bangsa Portugis dan negara Eropa lainnya seperti Belanda (M.D. Poesponegoro & N. Sutanto, 2008: 29). Seorang pelaut Belanda Cornelis de Houtman memimpin ekspedisi Belanda ke Indonesia. Pada tahun 1595 armada Belanda mengarungi ujung selatan Afrika, selanjutnya terus menuju ke arah timur melewati Samudra Hindia. Tahun 1596 armada Houtman tiba di pelabuhan Banten melalui selat Sunda. Pada tahun 1595 ini merupakan ekspedisi pelayaran pertama Belanda ke Indonesia. Sebanyak 4 buah kapal dengan 249 awak dan 64 pucuk meriam berangkat di bawah pimpinan Cornelis de Houtman. Pada bulan Juni 1596, kapal-kapal de Houtman tiba di Banten pelabuhan lada terbesar di Jawa Barat ( M.C Ricklefs, 2008: 50). Kedatangan Houtman di Indonesia kemudian disusul ekspedisi-ekspedisi lainnya. Tiga tahun setelah Houtman, tahun 1599 armada di bawah pimpinan Jacob van Neck tiba di Maluku. Rombongan van Neck diterima baik oleh masyarakat Maluku. Setelah selesai melakukan perdagangan rempah di pulau Maluku armada van Neck kembali ke negeri Belanda pada tahun 1599-1600 dengan banyak mengangkut rempah-rempah yang pada hasilnya mendapatkan keuntungan sebanyak 400 persen.</p>
+					<p>Banyaknya pedagang Belanda di Indonesia maka munculah persaingan diantara mereka sendiri. Untuk mencegah persaingan antar pedagang maka pada tahun 1602 didirikan VOC (<i>Vereenidge Oost Indische Compagnie</i>) atau biasa disebut persekutuan dagang Belanda Hindia Timur. Serikat perusahaan dagang VOC dikelola oleh sebuah badan (<i>bewindhebbers</i>) yang berjumlah sekitar 70 orang yang mewakili perusahaan-perusahaan lokal yang ada sebelumnya. Para manajer tersebut memilih 17 orang menjadi direksi heeren XVII (M.D. Poesponegoro & N. Sutanto, 2008: 29). Persekutuan dagang VOC diberikan hak keistimewaan dari parlemen. Keistimewaan tersebut adalah dengan diberikannya hak <i>oktroi</i> kepada VOC. Dalam hak <i>oktroi</i> tersebut VOC mempunyai wewenang untuk mendaftarkan personel, melakukan peperangan, membangun benteng, dan mengadakan perjanjian di seluruh Asia ( M.C Ricklefs, 2008: 51). </p>
+					<p>Selama masa jabatan tiga gubernur jenderal yang pertama (1610- 1619) wilayah Ambon merupakan pusat VOC di Hindia Belanda. Tetapi dalam perjalannya Ambon yang merupakan wilayah penghasil rempahrempah tidak begitu memuaskan sebagai markas besar. Ambon terlalu jauhdari pusat perdagangan Asia. Oleh karena itu, Belanda berinisiatif memindahkan markas besar nya ke Indonesia bagian barat yaitu daerah dekat selat Sunda atau Banten ( M.C Ricklefs, 2008: 54).</p>
+					<figure>
+						<img src="img/materi/image9.png" style="width: 100%; max-width: 600px;" title=""/>
+						<figcaption>Kedatangan J.P. Coen di Banten</figcaption>
+					</figure>
+					<p>Bulan Mei 1619, J.P Coen berlayar kembali ke pelabuhan Batavia. Pada tanggal 30 Mei J.P. Coen menyerang kota, meratakan kota, dan memukul tentara Banten. Pusat perdagangan VOC di Batavia berdiri tegak kembali dan kini VOC memiliki markas besar untuk berniaga ( M.C Ricklefs, 2008: 58). </p>
+					<p>R.Z. Leiriza (2012: 25-26), Pada masa gubernur jenderal J.P. Coen (1619-1623, 1627-1629) diberlakukan berbagai kebijakan diantaranya adalah sebagai berikut:
+						<ol>
+							<li>Memonopoli perdagangan di Maluku</li>
+							<li>Menjadikan Batavia sebagai pelabuhan dan pusat kekuasaan VOC.</li>
+							<li>Menjalankan politik devide it impera (adu domba) diantara raja-raja di Jawa dengan kerajaan lainnya.</li>
+							<li>Mendatangkan warga Belanda untuk mengelola pertanian di Indonesia.</li>
+							<li>Proses westernisasi pada budaya-budaya pribumi.</li>
+							<li>Memonopoli perdagangan rempah-rempah.</li>
+						</ol>
+					</p>
+					<p>Pada tahun 1799 VOC mengalami kebangkrutan yang disebakan oleh beberapa faktor, antara lain:
+						<ol>
+							<li>Banyaknya korupsi yang dilakukan para pegawai VOC.</li> 
+							<li>Banyaknya biaya peperangan akibat dari peperangan yang dilakukan VOC di Indonesia.</li>
+							<li>Persaingan yang ketat dengan kongsi dagang lain.</li>
+							<li>Ketidakmampuan masyarakat pribumi dalam membeli barang-banrang Belanda.</li>
+							<li>Terjadinya perdagangan gelap.</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="masa-belanda-1-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Masa Hindia Belanda I dan Kerja Paksa</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Masa Hindia Belanda I dan Kerja Paksa</h2>
+				<p>Setelah VOC bangkrut pada tahun 1779, pemerintah kolonial di Indonesia dilanjutkan oleh Republik Bataaf. Pemerintahan ini sangat erat hubungannya dengan perkembanagn sejarah Eropa, yaitu ekspansi Perancis ke seluruh Eropa. Pada akhir abad XVIII dan awal abad XIX, perang koalisi terjadi di Eropa yang disebabkan oleh ambisi ekspansionis Perancis terhadap negara-negara di Eropa. Dalam perang tersebut, Perancis dibawah Napoleon Bonaparte menyerang kerajaan Belanda pada 1795. Raja Belanda melarikan ke London dan mencari perlindungan kepada raja Inggris. Di Belanda kemudian diangkat seorang raja baru bernama Louis Bonaparte, yang merupakan adik raja Perancis untuk menduduki takhta kerajaan Belanda. Oleh karena Indonesia dianggap sebagai koloni kerajaan Belanda, maka diangkatlah H.W. Daendels sebagai Gubernur Jenderal di Indonesia (Suhartono, 2012: 151). </p>
+				<p>Setelah tiba di Indonesia, Daendels menyelengarakan system pemerintahan sentralistik yang kuat dengan mengatur hierarki birokrasi pemerintahan. Deandels mengangkat Bupati yang ada di Jawa sebagai pegawai pemerintah. Jawa dibagi dalam tiga wilayah besar (<i>hoofdafdeeling</i>) yang kemudian disebut karisidenan (<i>residentie</i>). Tiap-tiap karisidenan dibagi lagi menjadi beberapa kabupaten. Tercatat Jawa dibagi menjadi 23 Karisidenan dan 74 kabupaten yang didalamnya belum termasuk kabupaten yang terdapat di karisidenan Jakarta, Yogyakarta, dan Surakarta (Suhartono, 2012: 156-157).</p>
+				<figure>
+					<img src="img/materi/image10.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>H.W. Daendels</figcaption>
+				</figure>
+				<a data-theme="b" href="#" onclick="VideoPlayer.play('file:///android_asset/www/vid/kerjapaksa.mp4')" data-role="button" data-icon="flat-video">Lihat Video</a>
+				<p>Kerja paksa merupakan salah satu kebijakan pemerintah kolonial. Kerja paksa yang dirancang pemerintah Belanda memiliki tujuan untuk mendapatkan keuntungan sebanyak-banyaknya dari bumi Indonesia. Salah satu program kerja paksa pemerintah Hindia Belanda era Daendels adalah pembangunan jalur Anyer sampai Panarukan yang memanjang lebih dari 1000 Km dari Cilegon (Banten), Jakarta, Bogor, Bandung, Cirebon, Semarang, Pati, Surabaya, Probolinggo, hingga Panarukan (Jawa Timur) .</p>
+				<figure>
+					<img src="img/materi/image11.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Jalur Pos Anyer-Panarukan</figcaption>
+				</figure>
+				<a data-theme="b" href="#" onclick="VideoPlayer.play('file:///android_asset/www/vid/jalurpos.mp4')" data-role="button" data-icon="flat-video">Lihat Video</a>
+				<p>Jalan Raya Pos (Anyer-Panarukan) sangat penting bagi pemerintah kolonial Hindia Belanda. Jalan Pos tersebut menjadi sarana transportasi pemerintahan serta berguna untuk mengangkut berbagai hasil bumi yang memiliki kualitas ekspor kala itu. Pembangunan jalan tersebut merupakan kebijakan Gubernur Jenderal Hindia Belanda bernama Herman Willem Daendels yang berkuasa sejak 1808-1811. Dengan adanya jalur Anyer132 Panarukan proses distribusi barang dan jasa untuk kepentingan colonial semakin cepat ( Sartono Kartodirdjo, :340).</p>
+				<p>Akhir dari pemerintahan Daendels terjadi pada tahun 1810 ketika Napoleon Bonaparte menurunkan Louis sehingga raja Belanda dan Negara Belanda dianeksasi Perancis. Setelah terjadi perubahan di Eropa, Daendels dipanggil pulang dan digantikan oleh orang yang lebih moderat yaitu Jan Willem Janssens yang sebelumnya adalah gubernur jenderal di Tanjung Harapan, Afrika. Janssens tiba di Indonesia pada 27 April 1811 ketika Inggris menyerang Jawa. Setelah Janssens tiba di Jawa, invasi Inggris atas Jawa telah mengancamnya dan pasukan Inggris dapat menaklukan pulau Jawa dengan suatu seran gan singkat antara bulan Agustus dan September 1811. Akibat invasi Inggris tersebut, pemerintahan Janssens harus menyerahkan Jawa dan daerah taklukan kepada Inggris. Perjanjian penyerahan kekeuasaan tersebut terjadi di Tuntang pada 18 September 1811 (A. Daliman, 2012: 19).</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="masa-inggris-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Masa Pemerintahan Inggris dan Sistem Sewa Tanah</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Masa Pemerintahan Inggris dan Sistem Sewa Tanah</h2>
+				<p>Inggris mendarat di Batavia pada tanggal 03 Agustus 1811 dan langsung menyerang Belanda. Akhirnya Batavia jatuh ke tangan Inggris dan Janssens sebagai pengganti gubernur jenderal Daendels pergi ke Tuntang. Janssens tidak mempunyai pilihan selain menyerah kepada pasukan Inggris yang dipimpin Lord Minto. Menyerahnya Belanda itu tertuang dalam perjanjian Tuntangpada tanggal 18 Spetember 1811 (Suhartono, 2012: 159).</p>
+				<p>Wilayah Indonesia khusunya Jawa merupakan tempat dimana kongsi dagang VOC melakukan operasi dagang di wilayah Asia Tenggara. Kongsi dagang Inggris atau yang disebut East India Company (EIC) merupakan pesaing VOC dalam perdagangannya di Asia. Pendudukan Inggris atas Indonesia sangat berhubungan erat dengan peperangan antara Inggris dengan Perancis yang akhirnya berhasil demenangkan Inggris. Kala itu Belanda merupakan daerah yang bertuan kepada Perancis, dengan demikian Inggris berhak untuk mengambil wilayah milik Perancis beserta daerah jajahannya seperti Belanda. Inggris sendiri menilai penyerangan terhadap kedudukan Belanda di Jawa merupakan keharusan, sebab Belanda merupakan pihak yang bertuan kepada Perancis.</p>
+				<p>Armada Inggris lebih unggul daripada Belanda sehingga kemenangan ada di pihak Inggris. Pusat kantor dagang Inggris, East India Company (EIC) yang berkedudukan di Calcutta memerintahkan penyerangan terhadapa Belanda di Jawa. setelah kemenangan diperoleh, Indonesia masuk menjadi wilayah jajahan Inggris. Pemerintah Inggris kemudian mengangkat Thomas Stamford Raffles (1811-1816)</p>
+				<p>Sebagai letnan gubernur jendral di Indonesia. Pemerintahan Raffles tidak terlalu lama di Indonesia, hanya memerintah selama lima tahun. Sebagaimana pengaruh Eropa pada waktu itu, pemerintahan Raffles diwarnai liberalism sehingga Raffles pun mengembangkan pemerintahan liberal di Indonesia, khusunya Jawa (Suhartono, 2012: 152).</p>
+				<figure>
+					<img src="img/materi/image12.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Thomas Stamford Raffles</figcaption>
+				</figure>
+				<p>Pemerintahan Raffles yang singkat dan membawa perubahan di berbagai di berbagai segi kehidupan politik dan ekonomi ternyata berdampak pula bagi masyarakat Indonesia. Menjelang berakhirnya pemerintahan Inggris, Raffles digantikan oleh John Fendall. Inggris kemudian menyerahkan Indonesia kepada Belanda setelah berlangsungnya perjanjian London tahun 1814 antara kerjaan Inggris dan Belanda. Dalam bidang pemerintahan Raffles hanya tinggal melanjutkan system pemerintahan yang diterapkan oleh Daendels. Dalam masa pemerintahan Raffles, bupati diangkat sebagai pegawai pemerintah dibawah seorang residen. Selain itu Raffles membagi Jawa menjadi 16 Karisidenan yang dimana setiap karisidenan dikepalai seorang residen dan dibantu oleh beberapa asisten residen (Suhartono, 2012: 163).</p>
+				<p>Pembaruan Raffles dalam pemerintahan Jawa:
+					<ol>
+						<li>Sistem pemerintahan tradisional yang feodalistik diganti dengan organisasi modern.</li>
+						<li>Pemerintahan “Tidak Langsung” melalui perantara kepala lokal diterapkan.</li>
+						<li>Penyerahan paksa dan kerja paksa dihapuskan agar masyarakat memiliki kebebasan untuk berusaha.</li>
+						<li>Kepala daerah tidak lagi mempunyai wewenang untuk menarik pajak.</li>
+						<li>Menerapkan pengadilan dengan sistem juri.</li>
+					</ol>
+				</p>
+				<p>Dalam usaha untuk menegakan suatu kebijaksanaan kolonial baru Raffles berpatokan pada tiga asas sebagai penentu kebijakan, kebijakan tersebut digunakan karena menganggap sistem warisan Belanda tidak sesuai dengan sistem ekonomi yang akan digunakan Raffles di Indonesia (A. Daliman, 2012: 22). Kebijakan yang dilaksanakan antara lain:
+					<ol>
+						<li>Segala bentuk dan jenis penyerahan wajib maupun kerja rodi harus dihapuskan dan rakyat diberikan kebebasan penuh untuk menentukan jenis tanaman apa yang dikehendaki untuk ditanam tanpa unsur paksaan dari pemerintah.</li>
+						<li>Peranan Bupati sebagai pemungut pajak dihapuskan dan sebagai penggantinya mereka dijadikan bagian integral dari pemerintah colonial dengan fungsi-fungsi pemerintahan yang sesuai dengan asas-asas pemerintahan di negara Barat.</li>
+						<li>Pemerintah Kolonial adalah pemilik tanah sehingga petani dan penggarap tanah dianggap sebagai penyewa tanah dan diwajibkan untuk membayar sewa tanah (<i>landrent</i>).</li>
+					</ol>
+				</p>
+				<p>Pengaruh Raffles dalam bidang ilmu pengetahuan antara lain
+					<ol>
+						<li>Membangun gedung Harmoni untuk lembaga ilmu pengetahuan <i>Bataviassch Genootshap</i>.</li>
+						<li>Menulis sejarah “<i>History of Java</i>”</li>
+						<li>Membangun kebun raya Bogor</li>
+						<li>Mengabadikan namanya pada bunga bangkai <i>Rafflesia Arnoldi</i>.</li>
+					</ol>
+				</p>
+				<figure>
+					<img src="img/materi/image13.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Kebun Raya Bogor, Bunga Rafflesia Arnoldi, dan Buku History of Java karya T.S Raffles</figcaption>
+				</figure>
+				<h4><i>Landrent</i> (Sewa Tanah)</h4>
+				<p>Pada tahun 1811-1816 Inggris menjajah Indonesia. Penguasa Inggris di Indonesia pada saat itu adalah Gubernur Thomas Stamford Raffles. Salah satu kebijakan terkenal pada masa Raffles adalah sistem sewa tanah atau Landrent system. Sistem tersebut memiliki ketentuan, antara lain:
+					<ol>
+						<li>Petani harus menyewa tanah meskipun petani adalah pemilik tanah.</li>
+						<li>Harga sewa tanah tergantung kepada kondisi tanah.</li>
+						<li>Pembayaran sewa tanah dilakukan dengan uang.</li>
+						<li>Bagi masyarakat yang tidak memiliki tanah dikenakan pajak kepala.</li>
+					</ol>
+				</p>
+				<p>Sewa tanah tetap memberatkan rakyat dan menggambarkan seakan-akan rakyat tidak memiliki tanah, padahal tanah tersebut adalah miliki rakyat. Hasil sewa tanah tersebut tidak seluruhnya digunakan untuk kemakmuran rakyat. Hasil sewa tanah tersebut sebagian besar digunakan untuk kepentingan penjajah.</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="masa-belanda-2-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Masa Hindia Belanda II dan Tanam Paksa</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Masa Hindia Belanda II dan Tanam Paksa</h2>
+				<p>Peralihan kekuasaan dari tangan Inggris ke tangan Belanda yang terjadi pada tahun 1816 ini menghadapkan Belanda pada permasalahan sistem mana yang akan diterapkan di Indonesia agar keuntungan secara ekonomi tetap didapatkan (A. Daliman, 2012: 31). Terjadinya perubahan politik yang diakibatkan oleh peristiwa-peristiwa di Eropa mendorong Inggris dan Belanda mengadakan perundingan di London (A.M. Djuliati Suroyo, 2012: 139-140). Berikut ini ketetapan berdasarkan <i>Convention of London</i> (1814):
+					<ol>
+						<li>Semua bekas jajahan Belanda yang dikuasai Ingris dikembalikan kepada Belanda kecuali Afrika Selatan, Sri Lanka, dan beberapa tempat di India.</li>
+						<li>Akan dibentuk komisi yang dipimpin oleh komisaris Jenderal Elout, Buykes, dan Van der Capellen. Komisi ini bertugas memperbaiki ekonomi Indonesia, membayar utang-utang Belanda, dan mengambil piutangnya.</li>
+						<li>Pemerintah Belanda mendirikan <i>Nederlandsche Handels Maatschappij</i> (serikat dagang Belanda satu-satunya yang berhak mengekspor hasil bumi yang dihasilkan dari tanam paksa) yang mendapatkan bantuan dari pemerintah Belanda dan Eropa.</li>
+					</ol>
+				</p>
+				<p>Dengan demikian sejak tahun 1816 Indonesia diserahkan kembali kepada Belanda di bawah pimpinan Gubernur Jenderal Van der Capellen. Van der Capellen pada tahun 1823 membuat kebijakan menghentikan dan menghapus penyelewengan tanah swasta di Jawa Tengah. Kebijakan tersebut merugikan para bangsawan pribumi, karena mereka harus membayar ganti rugi dan uang sewa yang harus dibayarkan pada para pengusaha Eropa dan Cina. Inilah salah satu faktor penyebab munculnya pemborantak dari para bangsawan (A. Daliman, 2012: 37).</p>
+				<p>Tahun 1830 Van den Bosch menerapkan sitem tanam paksa (<i>cultuur stelsel</i>). Sistem tanam paksa ini mewajibkan rakyat untuk memberikan tenaganya untuk menanam tanaman ekspor yang berlaku di Eropa ( M.C Ricklefs, 2008: 260). Kebijakan ini diberlakukan karena Belanda menghadapi kesulitan keuangan akibat perang Jawa atau Perang Diponegoro (1825-1830), dan perang Belgia (1830-1831). Tanam paksa yang diberlakukan oleh pemerintah Belanda memiliki ketentuan yang sangat memberatkan bagi masyarakat Indonesia (A.M. Djuliati Suroyo, 2012: 142). </p>
+				<p>Praktik-praktik penekanan dan pemaksaan terhadap rakyat yang dilakukan antara lain:
+					<ol>
+						<li>Ketentuan tanah yang digunakan untuk tanaman wajib hanya 1/5 dari tanah yang dimiliki rakyat, kenyataannya selalu lebih bahkan sampai ½ bagian dari tanah yang dimiliki rakyat.</li>
+						<li>Kelebihan hasil panen tanaman wajib tidak pernah dibayarkan.</li>
+						<li>Kegagalan tanaman perdagangan yang bukan karena kesalahan penduduk menjadi tanggungan pemerintah, fakta yang terjadi tidak sesuai dengan kenyaataan dimana kegagalan tanaman tetap ditanggup penduduk.</li>
+						<li>Waktu untuk kerja wajib melebihi dari 66 hari dan tanpa imbalan yang memadai.</li>
+						<li>Tanah yang digunakan untuk tanaman wajib tetap dikenakan pajak.</li>
+					</ol>
+				</p>
+				<p>Dampak Negatif tanam paksa bagi rakyat: Pembangunan pabrik gula dan nila telah mengambil lahan, tenaga kerja, dan air utnuk penanaman padi (M.C Ricklefs, 2008: 265).</p>
+				<p>Dampak Positif Tanam Paksa bagi Belanda: Utang-utang VOC dapat dilunasi, Uang sebanyak 832 <i>Florins</i> disetor ke kas negara Belanda, Pajak-pajak di negara Belanda diturunkan, pembangunan jalur kereta api mulai dilaksanakan ( M.C Ricklefs, 2008: 268).</p>
+				<p>Tanam paksa secara bertahap dihapuskan, mulai dari tanaman yang paling tidak laku sampai dengan tanaman yang laku di pasaran Eropa. Secara berangsur-angsur penghapusan tanam paksa adalah sebagai berikut
+					<ol>
+						<li>Pada tahun 1860, penghapusan tanam paksa lada.</li>
+						<li>Pada tahun 1865, penghapusan tanam paksa untuk teh dan nila.</li>
+						<li>Pada tahun 1870, hampir semua jenis tanam paksa telah dihapuskan.</li>
+					</ol>
+				</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="kolonial-liberal-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Sistem Kolonial Liberal dan Undang-Undang Agraria</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Sistem Kolonial Liberal dan Undang-Undang Agraria</h2>
+				<p>Munculnya sistem Liberal di Indonesia kala itu disebabkan karena adanya kritikan dari golongan liberal di parlemen Belanda. Mereka menuntut agar sistem tanam paksa ini segera diakhiri dan diganti dengan sistem yang baru bercirikan liberalistik. Latar belakang munculnya sistem liberal ditandai dengan dikeluarkannya Undang-Undang Agraria pada tahun 1870. Sejak saat itu sistem liberal di Indonesia mulai berjalan dengan dibarengi masuknya modal swasta asing di koloni Indonesia. ( M.C Ricklefs, 2008: 271).</p>
+				<figure>
+					<img src="img/materi/image15.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Undang-undang Agraria</figcaption>
+				</figure>
+				<p>Undang-undang agraria mengatur berbagai syarat yang harus dilaksanakan investor selama melakukan usaha di Indonesia. Selain mengatur para investor, undang-undang agraria memungkinkan investor untuk menyewa tanah dari penduduk setempat. Tanah Bero (tak terpakai) dapat disewa dari pemerintah secara turun temurun selama 75 tahun atau lebih ( M.C Ricklefs, 2008: 271). </p>
+				<p>Dengan demikian pada periode ini pemerintah kolonial tidak lagi bertindak sebagai perusahaan raksasa dalam sistem tanam paksa, melainkan lebih bertindak sebgai supervisor dalam hubungan antara pengusaha Barat dan penduduk pedesaan (Djuliati Suroyo, 2012: 147). UU Agraria tahun 1870 membuka jalan bagi pihak swasta untuk menanamkan modalnya di Indonesia sehingga banyak investor swasta asing sperti Inggris, Belgia, Perancis, Amerika serikat, Cina dan Jepang yang menanamkan modalnya di Indonesia. Sistem kapital yang berlaku pada masa ini tidak lebih baik dari sistem sebelumnya. Sistem ekonmi tersebut telah mematikan para pengusaha pribumi yang memiliki modal kecil. Isi penting dari UU Agraria adalah sebagai berikut:
+					<ol>
+						<li>Pengusaha swasta dapat menyewa tanah milik penduduk setempat dan tanah milik pemerintah (Tanah Bero/tidak terpakai) selama 75 tahun atau lebih.</li>
+						<li>Tanah Indonesia dibagi menjadi dua, yaitu tanah rakyat (sawah, kebun, dan temapt tinggal) dan pemerintah ( Hutan dan Tanah belum digarap)</li>
+					</ol>
+				</p>
+				<p>Maksud pemerintah kolonial dari penyelenggaraan undang-undang agraria di pulau Jawa:
+					<ol>
+						<li>Pemerintah membuka peluang modal swasta untuk menanamkan modal di Indonesia, terutama untuk industri dan perkebunan.</li>
+						<li>Perluasan perkebunan di pulau Jawa</li>
+						<li>Tanah milk petani menjadi terlindungi dengan adanya supervisor dari pemerintah Belanda dalam hal persewaan tanah.</li>
+						<li>Perluasan lapangan pekerjaan.</li>
+					</ol>
+				</p>
+				<figure>
+					<img src="img/materi/image16.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Perusahaan Gula merupakan hasil dari berlakunya UU Agraria</figcaption>
+				</figure>
+				<p>Dampak positif UU Agraria bagi bangsa Indonesia, antara lain :
+					<ol>
+						<li>UU Agraria dianggap lebih ringan dari sistem Tanam Paksa.</li>
+						<li>Pembukaan sarana perusahaan swasta, seperti jalur kereta apai, jalan raya, irigasi, penerangan, serta fasilitas lainnya dapat sedikit dirasakan bangsa Indonesia.</li>
+						<li>Tumbuhnya lapangan kerja baru, baik di perkebunan maupun industri dan berkembangnya para pedagang perantara.</li>
+					</ol>
+				</p>
+				<p>Dampak negatif UU Agraria, antara lain sebagai berikut :
+					<ol>
+						<li>Meskipun sistem tanam paksa sudah dihapus, pajak rakyat tetap masih besar.</li>
+						<li>Beratnya pajak yang ditanggung rakyat mengakibatkan rakyat terjerat hutang kepada lintah darat.</li>
+						<li>Tingkat pendidikan yang masih rendah menyebabkan rakyat hanya menjadi buruh.</li>
+					</ol>
+				</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="saparua-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Saparua</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Saparua</h2>
+				<p>Perang Saparua terjadi di Ambon dipimpin oleh Thomas Matulessy atau Pattimura. Perlawanan rakyat di Saparua terjadi setelah Belanda berhasil mengambil alih wilayah Maluku dari tangan Inggris pada tahun 1817 (R.Z. Leiriza, 2012: 401). Kembalinya Belanda menjajah wilayah Maluku membuat Pattimura dan pasukannya tidak bisa diam begitu saja.</p>
+				<p>Pattimura memimpin pemberontakan di Saparua dan berhasil merebut benteng Belanda. Pattimura dan pasukannya berhasil membunuh residen Van den Berg. Belanda yang tidak terima dengan pemberontakan yang dilakukan Pattimura melakukan penyerangan dengan membawa pasukan dari Batavia, alhasil perlawanan Pattimura dapat diredam dan perjuangan Pattimura berakhir di tiang gantung bersama ketiga pengikutnya.</p>
+				<figure>
+					<img src="img/materi/image17.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption> Benteng Durstade milik VOC di Saparua dan Pattimura</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="padri-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Padri (1821-1838)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Padri (1821-1838)</h2>
+				<p>Minangkabau adalah pusat gerakan Islam di Indonesia. Gerakan tersebut merupakan hasil dari perkumpulan ulama minangkabau yang bertujuan memurnikan ajaran Islam pasca kepulangan para ulama/haji dari Mekkah (Gusti Asnan, 2012: 411). Ulama yang berperan dalam berdirinya kaum Padri antara lain; Haji Miskin, Haji Malik, dan Haji Piabang.</p>
+				<figure>
+					<img src="img/materi/image18.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Tuanku Imam Bonjol</figcaption>
+				</figure>
+				<p>Perlawanan Padri yang diorganisir oleh kaum ulama mendapat benturan dari kaum adat. Kaum adat yang semakin terjepit membuat Belanda berinisiatif membantu kaum adat. Akibat dari kerjasama antara kaum adat dengan Belanda terjadilah perjanjian dimana kaum adat menyerahkan kekuasaan Minangkabau kepada Belanda sebagai imbalan bantuan yang diberikan.</p>
+				<h4>1. Perlawanan Padri Tahap 1 (1821-1825)</h4>
+				<p>Perlawanan Padri pertama meletus pada tahun 1821 dengan dipimpin oleh Tuanku Imam Bonjol, Tuanku nan Cerdik, Tuanku Tambusai, dan Tuanku nan Alahan. Perlawanan Padri pertama ini berhasil mendesak benteng-benteng Belanda. Akibat semakin terdesaknya Belanda dan terjadinya perelawanan Diponegoro di pulau Jawa akhirnya Belanda melakukan perdamaian di Bonjol pada 15 November 1825.</p>
+				<h4>2. Perlawanan Padri Tahap 2 (1825-1837)</h4>
+				<p>Setelah Belanda berhasil memenangkan Jawa dalam perlawanan Diponegoro, Belanda kembali berkonsentrasi dalam perang melawan kaum Padri. Dalam perlawanan Diponegoro yang berhasilkan dimenangkan, Belanda memiliki kekuatan baru yang kuat. Kekuatan tersebut berasal dari Sentot Ali Basyah Prawirodirdjo (salah satu pimpinan perang Diponegoro yang ditangkap Belanda) yang ikut turut dalam kekuatan Belanda dalam perang Padri.</p>
+				<figure>
+					<img src="img/materi/image19.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Perlawanan Padri</figcaption>
+				</figure>
+				<p>Belanda menerapkan  sistem pertahanan Benteng Stelsel. Benteng Fort de Kock di Bukittinggi dan Benteng Fort de Cappelen adalah benteng pertahanan Belanda. Dengan siasat ini, Belanda berhasil mengalahkan kaum Padri di Bonjol pada tahun 1837. Tuanku Imam Bonjol berhasil ditangkap dan diasingkan ke Priangan, kemudian dibawa ke Ambon dan terakhir di Manado hingga wafat tahun 1864 (Gusti Asnan, 2012: 426).</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+		
+		<!-- template page -->
+		<div  id="diponegoro-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Diponegoro (1825-1830)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Diponegoro (1825-1830)</h2>
+				<p>Latar belakang perlawanan pangeran Diponegoron diawali dari campur tangan Belanda dalam urusan politik keraton Yogyakarta. Wafatnya Hamengkubuwono ke empat tahun 1822 menumbulkan perselisihan tentang siapa pengganti tahta keraton (Saleh As‟ad Djamhari, 2012: 430). </p>
+				<p>Saat itu, putra mahkota baru berumur 3 tahun. Selain perselisihan yang terjadi di dalam keraton, kegagalan panen pada tahun 1820 dan tindakan Belanda yang sewenang-wenang terhadap rakyat membuat pangeran Diponegoro melakukan perlawanan.</p>
+				<p>Belanda membangun jalan baru pada Mei 1825 dengan memasaang patok-patok di tanah leluhur Pangeran Diponegoro. Patih Danurejan IV berhasil mencabut patok-patok Belanda dan dengan tindakan tersebut Belanda marah dan melakukan serangan untuk menangkap Pangeran Diponegoro. Pada tanggal 20 Juli di Tegalrejo tempat dimana Pangeran Diponegoro tinggal berhasil direbut.  Diponegoro berhasil melarikan diri dan mengumandangkan perang Jawa pada tahun (1825-1830). </p>
+				<p>Pemberontakan tersebut terjadi di Jawa Tengah dan Jawa Timur, namum pusat perlawana tetap berada di Yogyakarta. Lima Belas dari dua puluh sembilan pangeran ikut bergabung dalam pasukan Diponegoro sehingga Belanda benar-benar terjepit. Upaya Belanda dalam meredam perlawanan Belanda tetap dilancarkan salah satunya dengan menerapkan sistem Benteng Stelsel. Sistem Benteng Stelsel ini berhasil memecah belah jumlah pasukan musuh. Pada tahun 1829, Kiai Maja ditangkap oleh Belanda kemudian disusul oleh Pangeran Mangkubumi dan panglima Sentot AliBasyah Prawiryodirdjo.</p>
+				<figure>
+					<img src="img/materi/image21.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Pangeran Diponegoro</figcaption>
+				</figure>
+				<p>Pada tahun 1830, Diponegoro akhirnya mau melaksanakan perundingan dengan Belanda di Magelang Jawa Tengah. Perundingan tersebut hanya sebagai tipu muslihat. Akhirnya pangeran Diponegoro ditangkap dan diasingkan ke Manado, kemudian ke Makassar hingga wafat tahun 1855. Dengan berakhirnya perang Jawa maka tidak lagi muncul perlawanan yang berat di tanah Jawa (Saleh As‟ad Djamhari, 2012: 449).</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="aceh-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Aceh (1873-1904)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Aceh (1873-1904)</h2>
+				<p>Pada tahun 1873 diadakan traktat London dimana belanda menyerahkan Sri Lanka kepada Inggris dan Belanda mendapatkan hak atas Aceh. Hasil dari traktat tersebut Belanda melakukan serangan ke istana Aceh tahun 1873. Saat itu Aceh merupakan wilayah  merdeka sehingga dengan alasan tersebut rakyat Aceh tetap tidak terima wilayahnya dijajah.</p>
+				<p>Dengan semangat Jihad rakyat Aceh mengadakan perlawanan. Jendral Kohler terbunuh dalam perlawanan ini. Siasat konsentrasi Stelsel dengan sistem bertahan dalam benteng besar oleh Belanda tidak berhasil. Belanda semakin terdesak dan korabn dari pihak Belanda juga semakin bertambah.</p>
+				<p>Secara fisik Belanda tidak mampu mengalahkan tentara Aceh, hal ini disebabkan oleh semangat jihad yang tinggi masyarakat Aceh. Dengan demikian Belanda menggunakan siasat lain yaitu menggunakan Dr. Snouck Hurgronje untuk mencari kelemahan masyarakat Aceh. </p>
+				<p>Dr. Snouck Hurgronje menyamar sebagai Abdul Gafar seorang ahli bahasa, sejarah dan sosial Islam. Snouck Hurgronje memberikan saran-saran kepada Belanda untuk dapat mengalahkan Aceh. Salah satu cara yang dilaksanakan yaitu dengan mengadu domba antara golongan Ulebalang (bangsawan) dengan Ulama. </p>
+				<p>Belanda akan meberikan kedudukan kepada Ulebalang jika bersedia berdamai. Taktik ini berhasil dan semenjak tahun 1898 Aceh semakin terdesak. Tokoh-tokoh Aceh banyak yang gugur kala itu, Teuku Umar gugur di pertempuran Meulaboh 1899. Sultan Aceh Mohammad Daudsyah dapat ditawan tahun 1903 dan diasingkan hingga wafat di Batavia. Panglima Polim juga menyerah 1903 serta Cut Nyak Dien tokoh pemimpin perempuan ditangkap tahun 1905 kemudian diasingkan ke Sumedang.</p>
+				<figure>
+					<img src="img/materi/image22.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Teuku Umar, Panglima Polim, Cut Nyak Dien</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="sisingamangaraja-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Sisingamangaraja (1878-1907)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Sisingamangaraja (1878-1907)</h2>
+				<p>Desas-desus yang memberitakan bahwa Si Singamangaraja XII bersama pejuang Aceh berencana untuk menyerang zending di Simalungun tercium oleh garnisun militer di Sibolga. Kecurigaan garnisun belanda tersebut ditambah dengan adanya kabar bahwa Raja mempersenjatai rakyat dengan 50 pucuk senapan.</p>
+				<p>Tanggal 8 Januari 1878 serdadu Belanda di Sibolga mendapat  perintah untuk menyerang daerah Silindung. Intervensi militer Belanda ke daerah Silindung dijawab oleh Si Singamangaraja XII dengan pernyataan perang terhadap Belanda. Pada tahun tersebut meletuslah perang Batak yang dipimpin langsung oleh Si Singamangaraja XII. Pertempuran yang meluas di Seluruh tanah Batak ini berlangsung selama 29 tahun 1878-1907 (Rusdi Sufi, 2012: 578).</p>
+				<p>Untuk menghadapi perang Batak, Belanda menarik pasukan dari  Aceh. Pasukan Sisingamangaraja dapat dikalahkan setelah kapten Christoffel berhasil mengepung benteng terakhir Sisingamangaraja di Pakpak. Kedua putra beliau Patuan Nagari dan Patuan Anggikut gugur sehingga seluruh Tapanuli dapat dikuasai Belanda.</p>
+				<figure>
+					<img src="img/materi/image23.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Si Singamangaraja XII</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="banjar-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Banjar (1858-1866)</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Banjar (1858-1866)</h2>
+				<p>Perang Banjar berawal ketika Belanda ikut campur dalam urusan penggantian raja dikerajaan Banjarmasin. Belanda memberi dukungan kepada Tamjid Ullah yang tidak disukai rakyat. Pemberontakan dilakukan oleh Prabu Anom dan Pangeran Hidayat. Pada tahun 1859, pangeran Antasari memimpin perlawanan setelah Prabu Anom tertangkap Belanda. Dengan bantuan pasukan dari Belanda pasukan Antasari dapat didesak. Tahun 1862 Pangeran Hidayat menyerah dan  berakhirlah perlawanan Banjar di Kalimantan pada tahun 1866.</p>
+				<figure>
+					<img src="img/materi/image24.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Pangeran Antasari</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="jagaraga-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Jagaraga Bali</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Jagaraga Bali</h2>
+				<p>Perang Jagaraga berawal ketika Belanda dan kerajaan di Bali bersengketa tentang hak tawan karang, hak tawan karang berisi bahwa setiap kapal yang kandas di perairan Bali merupakan hak penguasa di daerah tersebut. Pemerintah Belanda memprotes raja Buleleng yang menyita dua kapal milik Belanda. Raja Buleleng tidak menerima tuntutan Belanda untuk mengembalikan kedua kapalnya. </p>
+				<p>Persengketaan ini menyebabkan Belanda melakukan serangan terhadap kerajaan Buleleng tahun 1846. Belanda berhasil menguasai kerajaan Buleleng, sementara Raja Buleleng menyingkir ke Jagaraga dibantu oleh kerajaan Karangasem.</p>
+				<p>Setelah berhasil merebut benteng Jagaraga, Belanda melanjutkan ekspedisi militer tahun 1849. Dua kerajaan Gianyar dan Klungkung menjadi sasaran Belanda. Pada 1906 seluruh kerajaan di Bali jatuh ke pihak Belanda setelah rakyat melakukan perang habis-habisan sampai mati atau yang biasa disebut perang puputan.</p>
+				<figure>
+					<img src="img/materi/image25.png" style="width: 100%; max-width: 600px;" title=""/>
+					<figcaption>Perlawanan Rakyat Bali</figcaption>
+				</figure>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+		
+		<!-- template page -->
+		<div  id="sosial-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>Perlawanan Sosial</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h2>Perlawanan Sosial</h2>
+				<p>Perlawanan sosial merupakan aktivitas kolektif yang bertujuan untuk mewujudkan atau menolak perubahan terhadap tatanan masyarakat yang ada. Gerakan sosial yang muncul di Indonesia pada abad XIX hingga awal abad XX dilakukan oleh rakyat dengan tujuan untuk mewujudkan harapan148 harapannya atau menolak perubahan-perubahan secara struktural sebagai akibat dominasi ekonomi, politik, dan kultural dari pemerintah kolonial. Peralihan dari kehidupan tradisional ke kehidupan modern telah diikuti oleh guncangan-guncangan sosial yang muncul secara silih berganti (Chusnul Hayati, 2012: 597).</p>
+				<p>Menghadapi penetrasi kolonial yang semakin menguasai kehidupan masyarakat, tradisi perlawanan terus berlangsung dalam berbagai bentuk gerakan sosial pada abad XIX hingga akhir kekuasaan Belanda. Gerakan sosial banyak bermotifkan nuansa agama, kepercayaan terrhadap Ratu Adil dan profesi. Gerakan ini diaplikasikan kedalam berbagai bentuk seperti demonstrasi, kerusuhan, atau serangan bersenjata. </p>
+				<p>Sebagai contoh gerakan perlawanan petani di Ciomas Jawa Barat tahun 1886, perlawanan Condet (Jakarta) tahun 1916 dipimpin Entong Gendut, dan sebagainya. Gerakan Ratu Adil adalah gerakan yang muncul sebagai akibat keyakinan akan datangnya Ratu Adil. Ratu Adil dianggap akan menyelamatkan rakyat dari belenggu penindasan. Pemimpinnya biasa mengaku mendapat wahyu untuk menyelamatkan rakyat.</p>
+				<p>Gerakan keagamaan adalah gerakan yang muncul sebagai dasarkeagamaan terutama untuk menegakan syariat agama yang benar. Gerakan bernafaskan religi sangat mempengaruhi perang-perang besar yang terjadi di Indonesia. Gerakan ini sering melakukan perlawanan-perlawanan kecil yang mudah dipatahkan oleh pihak keamanan Belanda.</p>
+				<h3>Tambahan</h3>
+				<div>
+					<h3>Maluku</h3>
+					<p>Pada pertemuan tanggal 14 Mei 1817 di pulau Saparua para pemuda dan penguasa-penguasa desa memutuskan untuk menghancurkan pusat kekuasaan colonial di benteng Duurstade yang terletak di Saparua. Keputusan yang sanagat rahasia ini diteruskan kepada setiap negeri di pulau itu. Selain itu dalam musyawarah ditempat itu mereka juga memilih Thomas Matulesy sebagai pemimpin perang dengan julukan Pattimura. Setelah merebut pusat pemerintahan Hindia Beanda di Saparua, para pengikut Pattimura Thomas Mattulesi mengeluarkan suatu pernyataan yang ditujukan pada pihak musuhnya.</p>
+					<p>Di dalam pernyataan tertanggal 27 Mei 1817 itu pengikut Pattimura menegaskan , bahwa orang-orang Ambon menuntut perbaikan-perbaikan di Maluku Tengah. Bila perbaikanperbaikan yang disebut satu persatu di dalam pernyataan itu dapat dipenuhi, maka perlawanan akan dihentikan. Tetapi bila tuntutan-tuntutan itu tidak dapat dipenuhi dengan sendirinya penduduk Maluku Tengah tidak akan mengakui hubungannya dengan pemerintah Hindia Belanda lagi. </p>
+					<p>Perlawanan yang tidak kunjung reda di Saparua, Haruku, dan Ambon dengan pasukan alifuru dari seram itu berlangsung terus dalam bulan Agustus sampai November. Dalam bulan Desember 1817 Kapitan Pattimura bersama tiga orang panglimanya di jatuhi hukuman mati yang dijalankannya di benteng Nieuw Victoria di Ambon. Beberapa orang pemimpin lainnya mengalami nasib yang sama seperti kapitan Paulus Tiahahu yang dihukum pancung du Nusalaut dan kapitan Ulupaha yang diangkat dari Luhu untuk digantung di Ambon. Pelaksanaa hukuman mati dilakukan atas pemimpin-pemimpin yang rendah. Sejumlah pasukan yang tertangkap dikenakan hukuman buangan ke Cianjur dan sebagian terbesar dikenakan amnesti.</p>
+				</div>
+				<div>
+					<h3>Kalimantan Selatan</h3>
+					<p>Kedudukan pangeran hidayat sejak diangkat menjadi Mangkubumipada tahin 1858, menjadi suit. Waktu pangeran Tamjidillah menggantikan Sultan Adam menjadi sutan pada tahun 1857, pangeran hidayat merasa tersisihkan. Pendiriannya yang selalu bertentangan dengan pangeran Tamjidillah juga menyulitkan kedudukannya sebagai Mangkubumi.</p>
+					<p>Pangeran Prabu Anom yang waktu dicurigai oleh Belanda dapat ditangkap Belanda dengan menggunakan pengaruh pangeran Hidayat sebagai Mangkubumi. Namun pembuangan Prabu Anom ke jawa menimbulkan kekecewaan pada diri Pangeran Hidayat, karena menurut kesanggupan Residen Belanda bahwa pangeran Prabu Anom hanya akan ditahan di Banjarmasin.</p>
+					<p>Kericuhan ini dijadikan Belanda untuk mencampuri urusan dalam kerajaan Banjarmasin. Datanglah Kolonel Anderssen utusan pemerintah Belanda di Batavia (Jakarta), di Banjarmasin untuk menyelidiki dari dekat sebab-sebab kericuhan. Anderssen kemudian berkesimpulan bahwa Pangeran Tamjidillah yang tidak disenangi oleh rakyat adalah sumber kericuhan itu. </p>
+					<p>Sultan Tamjidillah kemudian diturunkan dari takhta dan kekeuasaan kerajaan Banjarmasin diambil alih oleh Belanda. Penentangan rakyat terhadap Sultan Tamjidillah kemudian beralih kepada pemerintah Belanda. Dalam situasi demikian pangeran hidayat akhirnya condong kapada rakyat.</p>
+					<p>Perlawanan rakyat terhadap Belanda berkobar di daearh-daerah dipimpin oleh pangeran Antasari yang berhasil menghimpun pasukan sebanyak 3.000 orang dan menyerbu pos-pos Belanda. Pos-pos Belanda di Martapura dan Pengaron diserang oleh Antasari pada tanggal 29 Aoril 1859. Di samping itu, kawan-kawan seperjuangan Pangeran Antasari juga telah mengadakan penyerangan terhadap pasukan-pasukan Belanda yang dijumpainya. </p>
+					<p>Pada saat pangeran Antasari mengepung benteng Belanda di Pangeron, Kyai Demang Leman dengan pasukannnya telah bergerak di sekitar Riam Kiwa dan mengancam benteng Belanda setempat. Bersama-sama degan Haji Nasrun pada tanggal 30 Juni 1859 ia menyerbu pos Belanda yang berada di istana martapura. Dalam bulan Agustus 1859 bersama Haji Buyasin dan Kyai Langlang, Kyai Demang Leman berhasil merebut benteng Belanda di Tabanio.</p>
+					<p>Setelah meninggalnya pangeran Antasari, perlawanan rakyat masih terus berlangsung dipimpin oleh teman-tean seperjuangan dan putra-putranya. Kyai Demang Leman terus mengadakan perlawanan secara gerilya di sekitar Martapura. Aminullah memusatkan operasinya di perbatasan Pasir, sedangkan Pangeran Prabu Anom bergerilya di daerah Amandit. Demikian pula sekitar Khayahan Atas tetap tidak aman bagi Belanda karena gangguan dari para gerilyawan. </p>
+					<p>Kyai Demang Leman akhirnya ditangkap dan di hokum gantung 17 Februari 1864 di Martapura.</p>
+				</div>
+				<div>
+					<h3>Bali</h3>
+					<p>Dalam tahun 1845 Raja Buleleng menolak pengesahan perjanjian penghapusan  hukum Tawan Karang yang diajukan oleh pemerintah Hindia Belanda. Dalam pada itu tuntutan Belanda agar raja Buleleng melaksanakan isis perjanjian yang mereka buat pada tahun 1841 dan 1843, yaitu mengganti kerugian atas kapal-kapal Belanda, yang dirampas dan menerima kekuasaan Hindia Belanda, telah menimbulkan kegelisahan pada diri raja.</p>
+					<p>Patih Buleleng Gusti Ketut jelantik dengan tegas mengatakan bahwa tuntutan tersebut tidak mungkin diterima. Gusti Jelantik yang terkenal sangat menentang Belanda, mengatahui akibat yang akan terjadi dengan penolakan tuntutan pemerintah Hindia Belanda tersebut. Ia menghimpun pasukan menggiatkan latihan berperang, menambah perlengkapan dan persenjataan guna menghadapi hal-hal yang tidak diinginkan.</p>
+					<p>Situasi di Bali menjadi tegang karena sikap Kerajaan Buleleng dan Karangasem. Dalam keadaan demikian, GustiJelantik mempersiapkan prajurit Kerajaan Buleleng dan memperkuat kubu-kubu pertahanan untuk menjaga kemungkinan apabila sewaktu-waktu Belanda mengadakan penyerangan.pertahanan prajurit Bali yang berada di kampong-kampung dekat pantai satu demi satu akhirnya jatuh ke tangan Belanda.</p>
+					<p>Demikian pula Ben teng prajurit bali di Buleleng setekah dipertahankan dengan gigih pada tanggal 28 Juni 1846 terpaksa ditinggalkan dan diduduki oleh pasukan Belanda. Dengan kekalahan prajurit Bali tersebut, terbuka kesempatan bagi pasukan Belanda untuk melanjutkan penyerangan terhadap Singaraja, ibukota kerajaan Buleleng. Prajurit-prajurit Bali di Singaraja berusaha dengan keras untuk menghadapi serangan Belanda dan dengan gigih mencoba mempertahankan istana raja.</p>
+					<p>Pertempuran di sekitar istana terjadi dengan sengitnya. Usaha pasukan Bali tidak berhasil karena kekuatan musuh terutama di bidang persenjataan jauh lebih baik. Istana raja akhirnya pada tanggal 29 Juni 1846 dapat diduduki oleh Belanda.</p>
+					<p>Jatuhnya Buleleng ke tangan Belanda membawa penagruh pada Negara-negara lain. Beberapa kerajaan menjadi bersikap lunak dan bersedia berdamai dengan Belanda, tetapi di samping itu ada juga Negara yang menjunjung sikap menentang, seperi Karangasem dan Klungkung, yang siap menghadapi Belanda dengan jumlah 15-16 ribu prajurit. </p>
+					<p>Dari seluruh uraian diatas Nampak tragedi bahwa perlawanan-perlawanan gigih dari pemimpin bali akhirnya dapat dipatahkan oleh kolonialisme belanda dengan bantuan sesama pemimpin Bali sendiri.</p>
+				</div>
+				<div>
+					<h3>Sumatera Utara</h3>
+					<p>Perang di tanah Batak berlangsung kurang lebih selama 29 tahun, dimulai dari tahun 1878 sampai dengan tahun 1907. Peperangan ini disebut juga dengan perang Batak atau perang Sisingamangaraja XII yaitu “raja” terakhir dari tanah batak putra dari Sisingamangaraja XI. Perlawanan ditujukan untuk menentang kekuasaan pemerintah Hindia Belanda yang akan menguasai daerah Batak pada abad ke-19. Operasi pasukan Belanda akhirnya sampai di daerah Pak-pak dan Dairi dimana Si Singamangaraja XII bersama pasukannya bertahan.</p>
+					<p>Pejuang-pejuang batak semakin terdesak dan hubungan dengan daerah-daerah Aceh terputus. Si Singa Mangaraja XII terkepung rapat-rapat di daerah segi tiga antara; Barus-Sidikalang dan Singkel (Perbatasan Aceh). Akan tetapi ia senantiasa berpindah-pindah tempat.</p>
+					<p>Akhirnya pada tanggal 17 Juni 1907, jam 14.00 siang, pasukan Hans Christoffel yang terdiri dari orang-orang Ambon, Halmahera dan orang Belanda berhasil menemukan Si Singamangaraja XII di dekat Aik Sibulbun, daerah Dairi. Dalam keadaan yang sangat lemah ini Si Singamangaraja XII bersama putra-putranya dan pengikutnya tetap mengadakan perlawanan. Dalam peristiwa ini Si Singamangaraja XII tertembak oleh pasukan Belanda yang mengepungnya dan gugur pada waktu itu.</p>
+				</div>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>
+			
+		<div  id="silabus-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h2>KOMPETENSI</h2>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<h4>Kompetensi Inti</h4>
+				<ol>
+					<li>Menghargai  dan menghayati  ajaran  agama  yang  dianutnya</li>
+					<li>Menghargai  dan  menghayati  perilaku  jujur,  disiplin,  tanggungjawab, peduli  (toleransi,  gotong  royong),  santun,  percaya  diri,   dalam berinteraksi  secara  efektif  dengan  lingkungan  sosial  dan  alam  dalam jangkauan pergaulan dan  keberadaannya </li>
+					<li>Memahami  pengetahuan  (faktual,  konseptual,  dan  prosedural) berdasarkan  rasa  ingin  tahunya  tentang  ilmu  pengetahuan,  teknologi, seni, budaya  terkait  fenomena  dan kejadian tampak mata</li>
+					<li>Mencoba,  mengolah,  dan  menyaji  dalam  ranah  konkret (menggunakan,  mengurai,  merangkai,  memodifikasi,  dan  membuat)  dan  ranah  abstrak  (menulis,  membaca,  menghitung,  menggambar,  dan mengarang)  sesuai  dengan  yang  dipelajari  di  sekolah  dan  sumber  lain yang  sama dalam sudut  pandang/teori</li>
+				</ol>
+				<h4>Kompetensi Dasar</h4>
+				<ol class="foo">
+					<li>Memahami  aspek  keruangan  dan  konektivitas  antar  ruang  dan  waktu dalam  lingkup  nasional  serta  perubahan  dan  keberlanjutan  kehidupan manusia (ekonomi, sosial, budaya, pendidikan dan  politik).</li>
+					<li>Mendeskripsikan  perubahan  masyarakat  Indonesia  pada  masa penjajahan  dan  tumbuhnya  semangat  kebangsaan  serta  perubahan dalam aspek  geografis,  ekonomi, budaya, pendidikan dan politik.</li>
+					<li>Mendiskripsikan fungsi dan peran kelembagaan sosial, budaya, ekonomi, dan politik dalam masyarakat.</li>
+					<li> Mendeskripsikan  bentuk-bentuk  dan  sifat  dinamika  interaksi manusia dengan lingkungan alam, sosial, budaya dan ekonomi.</li>
+				</ol>
+				<ol class="foo4">
+					<li>Menyajikan  hasil  olahan  telaah  tentang  peninggalan  kebudayaan  dan pikiran  masyarakat  Indonesia  pada  masa  penjajahan  dan  tumbuhnya semangat  kebangsaan  dalam  aspek  geografis,  ekonomi,  budaya, pendidikan dan politik  yang  ada  di lingkungan sekitarnya.</li>
+					<li>Menggunakan  berbagai  strategi  untuk  memecahkan  masalah  yang berkaitan  dengan  fungsi  peran  kelembagaan  sosial,  budaya,  ekonomi dan politik di lingkungan  masyarakat sekitar.</li>
+					<li>Menyajikan  hasil  pengamatan  tentang  bentuk-bentuk  dan  sifat dinamika  interaksi  manusia  dengan  lingkungan  alam,  sosial,  budaya, dan ekonomi di lingkungan masyarakat sekitar.</li>
+				</ol>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>	
+						
+						
+		<div  id="help-page" data-role="page" style="background-image:url('img/bg/bg-petunjuk.jpg'); background-repeat:no-repeat;background-size:100% 100%">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1 style="font-size: 24px;">BANTUAN</h1>							
+			</div>
+			<div data-role="content" align="center" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<p>Menu bantuan ini adalah menu yang berisikan informasi untuk mengetahui fungsi tiap tombol pada media pembelajaran ini.</p>
+				<p>Berikut adalah penjelasannya:</p>
+									
+				<img src="img/help/home.PNG" width="74" height="49">
+				<p>Tombol ini terletak di pojok kiri atas, berfungsi sebagai tombol untuk kembali ke menu utama.</p>
+				<img src="img/help/back.PNG" width="66" height="32">
+				<p>tombol ini terletak di bagaian pojok kiri bawah, berfungsi untuk kembali ke menu sebelumnya.</p>
+				
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			</div>
+		</div>			
+									
+		<div  id="evaluasi-page" data-role="page" style="background-image: url('img/Icon%20Materi/background%20soal.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" id="homeQuiz">Home</a>
+				<h1 style="font-size: 24px;">Evaluasi</h1>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<div id="divMulai" style="display:initial">
+					<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
+						<p><b>Pada Evaluasi terdapat berbagai kumpulan soal pilihan ganda yang tiap sesi akan ditampilkan 20 soal. Nilai jawaban benar 5 poin dengan total 100 poin. Tidak terdapat tombol kembali pada tiap soal. Diharapkan untuk menjawab dengan hati - hati dan benar. Silahkan Klik <i>Mulai</i> untuk mengerjakan soal.</b></p>
+					</div><br/>
+					<a href="#" data-theme="a"  data-role="button" onmousedown="mulaiSoal()">Mulai</a>
+				</div>
+				<div id="divSoal" style="display:none">
+					<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
+						<p id="textSoal" ></p>
+					</div>
+					<a href="#" data-role="button" onclick="cekJawaban('a')" style="text-align: left;" id="opsiA">dfg</a>
+					<a href="#" data-role="button" onclick="cekJawaban('b')" style="text-align: left;" id="opsiB">hrtrh</a>
+					<a href="#" data-role="button" onclick="cekJawaban('c')" style="text-align: left;" id="opsiC">rhtr</a>
+					<a href="#" data-role="button" onclick="cekJawaban('d')" style="text-align: left;" id="opsiD">tht</a>
+				</div>	
+				<center>
+					<div id="divSekor" style="margin:auto;" display:none;>
+						<div class="ui-corner-all custom-corner" style="width:200px">
+							<div data-role="header">
+								<h3>NILAI</h3>
+							</div>
+							<div data-role="content" style="background-color: rgba(255,255,255,0.7);">
+								<p id="sekor" style="text-align: center;font-size: 50px;">xxxxxxxxxxx</p>
+								<br/>
+								<b>KKM = 75</b>
+							</div>
+						</div>
+						<br/>
+						<div class="ui-corner-all custom-corner" style="width:100%" onclick="resetSoal()">
+							<div id="lulus-kkm" data-role="content" style="background-color: rgba(45,204,112,0.7);">
+								<p style="font-size: 16px; color: white;"><b>Selamat, coba kuis lainnya?</b></p>
+							</div>
+							<div id="gagal-kkm" data-role="content" style="background-color: rgba(255,44,44,0.7);">
+								<p style="font-size: 16px; color: white;"><b>Tingkatkan belajarmu! Silakan ulangi lagi kuisnya</b></p>
+							</div>
+						</div>
+						<br/>
+						<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halaman Utama</a>
+						</div>
+				</center>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" id="backQuiz">Back</a>
+			</div>
+		</div>	
+						
+		<div  id="about-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1>About App</h1>
+			</div>
+			<div data-role="content" align="center" style="font-size: 16px;">
+				<!-- Isi konten di sini --> 
+				<p>Kami mengucapkan terimakasih kepada semua pihak yang telah membantu dan mendukung pengembangan media pembelajaran ini. Semoga media ini bermanfaat bagi pendidikan di sekolah baik bagi siswa, guru, lembaga pendidikan maupun untuk tujuan pengembangan.</p>
+				<p>Kami menyadari bahwa media ini masih jauh dari kesempurnaan sehingga kami membutuhkan kritik dan masukannya untuk pengembangan media selanjutnya. </p>
+			
+				<p><b>Pengembang</b></p>
+				<img src="img/mahasiswa.jpeg" width="160">
+				<p><b>Muhamad Fachrizal</b></p>
+				<p>NIM: 12416244003</p>
+				<p>Mahasiswa Pendidikan IPS</p>
+				<p>Fakultas Ilmu Sosial</p>
+				<p>Universitas Negeri Yogyakarta</p>
+				<hr/>		
+			
+				<p><b>Penguji</b></p>
+				<p><b>Anik widiastuti, M.Pd</b></p>
+				<p>198411182008122004</p>
+				<hr/>		
+			
+				<p><b>Ahli Materi</b></p>
+				<p><b>Sudrajat, M.Pd</b></p>
+				<p>197305242006041</p>
+				<hr/>		
+			
+				<p><b>Ahli Materi</b></p>
+				<p><b>Satriyo wibowo, M.Pd</b></p>
+				<p>197412192008121001</p>
+				<hr/>
+			</div>
+		</div>
+    </div>
+	<script>
+			function debugKuis() {
+				alert("OK!");
+			}
+		//$(document).ready(function(){
+			var sndClick = new Audio();
+			sndClick.src = 'sound/click2.mp3';
+			$("a").mousedown(function() {
+				sndClick.play();
+			});
+		//});
+	</script>
+		
+	<script>
+		function debugKuis1() {
+			alert("OK!");
+		}
+		var nomorSoal = 0;
+		var sekor = 0;
+		var pengali = 5;
+		var nomorAcak = [0,1,2,3,4,5,6,7,8,9,
+						10,11,12,13,14,15,16,17,18,19
+						];
+		var soal = [
+					"<b>Fungsi rempah-rempah yang digunakan masyarakat Eropa ketika musim dingin tiba adalah ...</b>",
+					"<b>Pada Permulaan abad ke XV, wilayah yang berkembang pesat berada di kawasan ...</b>",
+					"<b>Revolusi Industri merupakan faktor ... bangsa Eropa melakukan penjelajahan samudera.</b>",
+					"<b>Dampak apakah yang ditimbulkan dari jatuhnya Konstantinopel ditangan Turki Utsmani dalam bidang perdagangan?</b>",
+					"<b>Teori Heliosentris adalah teori yang mebuktikan matahari sebagai pusat tata  surya, teori tersebut ditemukan oleh ...</b>",
+					"<b>Setelah berhasil menundukan Malaka, bangsa Portugis di bawah pimpinan Alfonso d‟albuquerque berhasil memasuki wilayah Maluku pada tahun ...</b>",
+					"<b>Jean Permentier adalah pemimpin pelayaran yang berasal dari negara ...</b>",
+					"<b>Tahun 1862 perusahaan dagang Inggris (<i>East India Company</i>) berhasil membangun kantor dagang di wilayah ...</b>",
+					"<b>Pilihlah jawaban yang benar.<br/>1) Diperbolehkan membentuk tentaranya sendiri.<br/>2) Diperbolehkan mendirikan kerajaan di tanah jajahan<br/>3) Diperbolehkan membangun benteng.<br/>4) Diperbolehkan menanam modal di tanah jajahan.<br/>Berdasarkan penyataan di atas, hak oktroi yang diberikan kepada VOC meliputi nomor ...</b>",
+					"<b>Siapa nama pejabat VOC yang berhasil mendirikan kota Batavia?</b>",
+					"<b>Pilihlah jawaban yang benar.<br/>1) Korupsi yang menjerat pejabat VOC.<br/>2) Pembiayaan peperangan yang banyak ditanggung VOC.<br/>3) Munculnya perdagangan bebas.<br/>4) Monopoli perdagangan VOC tidak berjalan dengan baik.<br/>Pada tahun 1799, VOC mengalami kebangkrutan yang disebabkan oleh ...</b>",
+					"<b>Pemerintahan H.W. Daendels berhasil membagi pulau Jawa menjadi berapa karisedenan?</b>",
+					"<b>Jalur Raya Pos era pemerintahan Daendels dibangun dari ... sampai ...</b>",
+					"<b>Siapa nama pengganti Gubernur Jenderal Daendels yang menandatangani kapitulasi Tuntang pada tahun 1811?</b>",
+					"<b>Apa isi perjanjian London/Traktat London tahun 1814?</b>",
+					"<b>Raffles membagi Pulau Jawa menjadi berapa karisedenan?</b>",
+					"<b>Tanam paksa adalah hasil gagasan Van den Bosch untuk mengatasi kesulitan keuangan Belanda yang disebabkan oleh peperangan ...</b>",
+					"<b>Undang-undang Agraria menyebabkan munculnya sistem Liberal di Indonesia, sistem ini muncul pada tahun ...</b>",
+					"<b>Sejak diberlakukannya undang-undang agraria, tanah di Indonesia dibagi  menjadi dua yaitu ...</b>",
+					"<b>Perlawanan Diponegoro di pulau Jawa berlangsung selama tahun?</b>"
+				];
+		var opsiA = [									 	   
+					"Digunakan untuk bahan makanan.",
+					"Portugal.",
+					"Penarik.",
+					"Harga rempa-rempah naik. ",
+					"Nicolaus Copernicus.",
+					"1511.",
+					"Inggris.",
+					"Maluku.",
+					"1 dan 2.",
+					"Cornelis de Houtman.",
+					"1 dan 2. ",
+					"22 Karisedenan.",
+					"Anyer - Probolinggo.",
+					"Van der Capellen.",
+					"Belanda menyerahkan semua koloni kepada Inggris.",
+					"13.",
+					"Diponegoro di Jawa. ",
+					"1869.",
+					"Tanah Pemerintah dan Swasta.",
+					"1801-1806"
+				];
+		var opsiB = [									 	   
+					"Digunakan sebagai bahan obat.",
+					"Belanda.",
+					"Pendorong.",
+					"Harga rempah-rempah turun.",
+					"Galileo Galilei.",
+					"1512.",
+					"Belanda.",
+					"Malaka.",
+					"2 dan 3.",
+					"Van der Capellen.",
+					"2 dan 4.",
+					"23 Karisedenan. ",
+					"Anyer - Panarukan. ",
+					"Du Bus.",
+					"Belanda menyerahkan Tanjung Harapan kepada Inggris.",
+					"14.",
+					"Pattimura di Saparua.",
+					"1870.",
+					"Tanah Swasta dan Pejabat Lokal.",
+					"1811-1816"
+				];
+		var opsiC = [									 	   
+					"Digunakan sebagai alat tukar pembayaran (barter).",
+					"Konstantinopel.",
+					"Utama.",
+					"Bangsa Eropa mendapat keuntungan besar.",
+					"Bartolomo Diaz.",
+					"1513.",
+					"Perancis. ",
+					"Calcutta.",
+					"1 dan 3. ",
+					"Van den Bosch.",
+					"1 dan 3.",
+					"24 Karisedenan.",
+					"Batavia - Surabaya.",
+					"J.W. Janssens. ",
+					"Inggris menyerahkan Sri Lanka kepada Belanda.",
+					"15.",
+					"Perang Padri di Sumatera Barat.",
+					"1871.",
+					"Tanah rakyat dan pemerintah. ",
+					"1820-1825"
+				];
+		var opsiD = [									 	   
+					"Digunakan untuk mengawetkan daging hewan. ",
+					"Inggris.",
+					"Kedua.",
+					"Distribusi rempah-rempah melimpah di pasar Eropa.",
+					"Amerigo Vespuci.",
+					"1514.",
+					"Portugal.",
+					"Banten.",
+					"2 dan 4.",
+					"Jean Piterson Coen. ",
+					"3 dan 4.",
+					"25 Karisedenan.",
+					"Bogor - Surabaya.",
+					"Dirk Van Hogendrop.",
+					"Inggris menyerahkan semua koloni kepada Belanda kecuali Tanjung Harapan.",
+					"16. ",
+					"Perang Banjar di Kalimantan Selatan.",
+					"1872.",
+					"Tanah Pemerintah dan Kerajaan.",
+					"1825-1830"
+				];
+		var kunciJawaban = [        									 	   
+							"d",
+							"c",
+							"b",
+							"a",
+							"a",
+							"b",
+							"c",
+							"d",
+							"c",
+							"d",
+							"a",
+							"b",
+							"b",
+							"c",
+							"d",
+							"d",
+							"a",
+							"b",
+							"c",
+							"d"
+							];
+			var jumlahSoal = 20;//soal.length;
+			/*function shuffle(a) {
+				for (let i = a.length; i; i--) {
+					let j = Math.floor(Math.random() * i);
+					[a[i - 1], a[j]] = [a[j], a[i - 1]];
+				}
+			}*/
+			Array.prototype.shuffle = function() {
+			  var i = this.length, j, temp;
+			  if ( i == 0 ) return this;
+			  while ( --i ) {
+				 j = Math.floor( Math.random() * ( i + 1 ) );
+				 temp = this[i];
+				 this[i] = this[j];
+				 this[j] = temp;
+			  }
+			  return this;
+			}
+			function debugKuis2() {
+				alert("OK!");
+			}
+			function resetSoal(){
+				nomorSoal = 0;
+				sekor = 0;
+				$("#divMulai").show();
+				$("#divSoal").hide();
+				$("#divSekor").hide();
+				//document.getElementById("divMulai").style.display = "initial";
+				//document.getElementById("divSoal").style.display = "none";
+				//document.getElementById("divSekor").style.display = "none";
+			}
+			function mulaiSoal(){
+				$("#divMulai").hide();
+				$("#divSoal").show();
+				$("#backQuiz").hide();
+				$("#homeQuiz").hide();
+				//document.getElementById("divMulai").style.display = "none";
+				//document.getElementById("divSoal").style.display = "initial";
+				//shuffle(nomorAcak);
+				nomorAcak.shuffle();
+				tampilkanSoal();
+			}
+			function tampilkanSoal(){
+				document.getElementById("textSoal").innerHTML = nomorSoal+1 +". "+soal[nomorAcak[nomorSoal]];
+				document.getElementById("opsiA").innerHTML = "a. "+opsiA[nomorAcak[nomorSoal]];
+				document.getElementById("opsiB").innerHTML = "b. "+opsiB[nomorAcak[nomorSoal]];
+				document.getElementById("opsiC").innerHTML = "c. "+opsiC[nomorAcak[nomorSoal]];
+				document.getElementById("opsiD").innerHTML = "d. "+opsiD[nomorAcak[nomorSoal]];
+				//document.getElementById("opsiE").innerHTML = "e. "+opsiE[nomorAcak[nomorSoal]];
+				document.getElementById("opsiA").style.paddingLeft = "10px";
+				document.getElementById("opsiA").style.paddingTop = "10px";
+				document.getElementById("opsiA").style.paddingBottom = "10px";
+				document.getElementById("opsiB").style.paddingLeft = "10px";
+				document.getElementById("opsiB").style.paddingTop = "10px";
+				document.getElementById("opsiB").style.paddingBottom = "10px";
+				document.getElementById("opsiC").style.paddingLeft = "10px";
+				document.getElementById("opsiC").style.paddingTop = "10px";
+				document.getElementById("opsiC").style.paddingBottom = "10px";
+				document.getElementById("opsiD").style.paddingLeft = "10px";
+				document.getElementById("opsiD").style.paddingTop = "10px";
+				document.getElementById("opsiD").style.paddingBottom = "10px";
+				//document.getElementById("opsiE").style.paddingLeft = "10px";
+				//document.getElementById("opsiE").style.paddingTop = "10px";
+				//document.getElementById("opsiE").style.paddingBottom = "10px";
+				document.getElementById("divSoal").style.display = "initial";
+			}
+			function cekJawaban(value){
+				if(value == kunciJawaban[nomorAcak[nomorSoal]]){
+					sekor += 10;
+				}
+				nomorSoal++;
+				if(nomorSoal<jumlahSoal){
+					tampilkanSoal();
+				}else{
+					document.getElementById("divSoal").style.display = "none";
+					document.getElementById("divSekor").style.display = "initial";
+					document.getElementById("sekor").innerHTML = (sekor/2).toFixed(2);
+					$("#backQuiz").show();
+					$("#homeQuiz").show();
+					if((sekor/2)<75){
+						$("#lulus-kkm").hide();
+						$("#gagal-kkm").show();
+					}else{
+						$("#lulus-kkm").show();
+						$("#gagal-kkm").hide();
+					}
+				}
+			}
+	</script>
+		
+	<script>
+		function gotohome() {
+			location.href = "index.html#home-page";
+		}	
+	</script>
+		<script type="text/javascript" charset="utf-8" src="plugins/com.dawsonloudon.videoplayer/www/video.js"></script>
+		<script type="text/javascript">
+			function playVideo(vidUrl) {
+				window.plugins.videoPlayer.play(vidUrl);
+			}
+		</script>
+    </body>
+</html>
