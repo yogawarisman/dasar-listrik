@@ -34,14 +34,14 @@
     <preference name="SplashScreenDelay" value="5000" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <access origin="*" />
+	<access origin="http://latex.codecogs.com" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+    <allow-intent href="http://latex.codecogs.com" />
+    <allow-intent href="https://latex.codecogs.com" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <plugin name="com.dawsonloudon.videoplayer" spec="https://github.com/dawsonloudon/VideoPlayer.git" />
+   
 </widget>
