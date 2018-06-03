@@ -5,7 +5,7 @@
         Media Pembelajaran Dasar dan Pengukuran Listrik
     </description>
     <author email="yoga.warisman@gmail.com" >
-        Yoga Warisman
+        Yoga Warisman	
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
