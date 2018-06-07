@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.yoga.dasarlistrik" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Dasar dan Pengukuran Listrik</name>
+    <name>Konsep Listrik</name>
     <description>
-        Media Pembelajaran Dasar dan Pengukuran Listrik
+        Media Pembelajaran Dasar dan Pengukuran Listrik pada Kompetensi Dasar Mendeskripsikan Konsep Listrik
     </description>
     <author email="yoga.warisman@gmail.com" >
         Yoga Warisman	
