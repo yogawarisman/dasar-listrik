@@ -120,7 +120,18 @@ margin: .8em 30% .8em;
     font-size:0.8em;
 }
 
-
+#iconmateri1{
+	position: absolute;
+    top: 50%;
+	left: 50px;
+	transform: translate(-50%, -50%);
+}
+#iconmateri2{
+	position: absolute;
+    top: 50%;
+	left: 50px;
+	transform: translate(-50%, -50%);
+}
 .ui-btn-active {
     border: 1px solid       #1abc9c /*{global-active-border}*/;
     background:             #1abc9c /*{global-active-background-color}*/;
