@@ -34,7 +34,9 @@ h1 {
     padding:0px;
     text-align:center;
 }
-
+b{
+	color:#a05055;
+}
 span{
 	font-weight:bold;
 	text-transform:none;
@@ -43,6 +45,10 @@ span{
 	width:80%;
 	max-width:300px;
 	margin:15px, 0 15px;
+}
+.medlis{
+	width:40%;
+	max-width:150px;
 }
 #atomic{
 	width:95%;
