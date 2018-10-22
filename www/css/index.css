@@ -138,6 +138,13 @@ margin: .8em 30% .8em;
 	left: 50px;
 	transform: translate(-50%, -50%);
 }
+.listIcon{
+	position: absolute;
+    top: 50%;
+	left: 50px;
+	max-width:70px;
+	transform: translate(-50%, -50%);
+}
 .ui-btn-active {
     border: 1px solid       #1abc9c /*{global-active-border}*/;
     background:             #1abc9c /*{global-active-background-color}*/;
