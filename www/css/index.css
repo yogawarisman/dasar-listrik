@@ -76,7 +76,17 @@ sub{
 	font-size:10px;
 }
 
-
+#nilaikkm{
+	    display: inline-block;
+}
+bold{
+	color:#a05055;
+}
+.soal{
+	font-weight:bold;
+	text-align:justify;
+	text-transform:none;
+}
 /* header */
 .ui-header > .ui-btn {
     padding: 7px 10px 11px;

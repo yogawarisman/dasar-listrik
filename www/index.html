@@ -34,7 +34,7 @@
 </head>
 <body>
 	<audio autoplay loop>
-	   <source src="sound/side_path.mp3" type="audio/mpeg" />
+	   <source src="sound/lights.mp3" type="audio/mpeg" />
 	</audio>
     <div id="app" style="display:initial;">
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
@@ -908,53 +908,408 @@
 			</div>
 		</div>			
 									
-		<div  id="evaluasi-page" data-role="page" style="background-image: url('img/Icon%20Materi/background%20soal.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+		<div  id="evaluasi-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
 			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
-				<a href="#home-page"  data-role="button" data-icon="home" data-inline="true" id="homeQuiz">Home</a>
-				<h1 style="font-size: 24px;">Evaluasi</h1>
+				<a href="#home-page"  data-role="button" data-icon="home" data-inline="true" >Home</a>
+				<h1>Evaluasi</h1>
 			</div>
 			<div data-role="content" align="justify" style="font-size: 16px;">
 				<!-- Isi konten di sini -->
-				<div id="divMulai" style="display:initial">
-					<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
-						<p><b>Pada Evaluasi terdapat berbagai kumpulan soal pilihan ganda yang tiap sesi akan ditampilkan 20 soal. Nilai jawaban benar 5 poin dengan total 100 poin. Tidak terdapat tombol kembali pada tiap soal. Diharapkan untuk menjawab dengan hati - hati dan benar. Silahkan Klik <i>Mulai</i> untuk mengerjakan soal.</b></p>
-					</div><br/>
-					<a href="#" data-theme="a"  data-role="button" onmousedown="mulaiSoal()">Mulai</a>
+				<div data-role="content" id="quizstart">
+				 <h3 class="centerText">Penilaian : <br>
+				 Benar =  5 poin <br>
+				 Salah =  0 poin</h3>
+				 <button onClick="start()">M U L A I</button>                
+				</div>				
+				<div data-role="content" id="question0" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+				
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">1. Manakah yang tidak termasuk dalam fenomena listrik statis ?</p></legend>
+						<input type="radio" name="ans0" id="radio1_0" value="" />
+						<label for="radio1_0">Petir yang menyambar tiang besi.</label>
+						<input type="radio" name="ans0" id="radio1_1" value="" />
+						<label for="radio1_1">Potongan kertas yang menempel di penggaris setelah digosok.</label>
+						<input type="radio" name="ans0" id="radio1_2" value="" />
+						<label for="radio1_2">Menempelnya rambut di pakaian tetoron yang disetrika.</label>
+						<input type="radio" name="ans0" id="radio1_3" value="" />
+						<label for="radio1_3">Tersengat arus listrik ketika memegang stop kontak.</label>
+						
+					</fieldset>
+					<button data-theme="a" onClick="toggle(0,1)">Lanjut</button>
+					
 				</div>
-				<div id="divSoal" style="display:none">
-					<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
-						<p id="textSoal" ></p>
+				<div data-role="content" id="question1" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+				
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">2. Manakah pengertian atom yang benar ?</p></legend>
+						<input name="ans1" type="radio" id="radio2_0" value="" />
+						<label for="radio2_0">Partikel yang terdapat pada suatu unsur.</label>
+						<input type="radio" name="ans1" id="radio2_1" value="" />
+						<label for="radio2_1">Suatu zat yang terdiri atas partikel partikel kecil.</label>
+						<input type="radio" name="ans1" id="radio2_2" value="" />
+						<label for="radio2_2">Partikel partikel kecil dari suatu zat.</label>
+						<input type="radio" name="ans1" id="radio2_3" value="" />
+						<label for="radio2_3">Zat murni yang tidak dapat diuraikan.</label>
+						
+					</fieldset>
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(1,0)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(1,2)" data-theme="a">lanjut</a></div>
 					</div>
-					<a href="#" data-role="button" onclick="cekJawaban('a')" style="text-align: left;" id="opsiA">pilihan A</a>
-					<a href="#" data-role="button" onclick="cekJawaban('b')" style="text-align: left;" id="opsiB">pilihan B</a>
-					<a href="#" data-role="button" onclick="cekJawaban('c')" style="text-align: left;" id="opsiC">pilihan C</a>
-					<a href="#" data-role="button" onclick="cekJawaban('d')" style="text-align: left;" id="opsiD">Pilihan D</a>
-				</div>	
-				<center>
-					<div id="divSekor" style="margin:auto;" display:none;>
-						<div class="ui-corner-all custom-corner" style="width:200px">
-							<div data-role="header">
-								<h3>NILAI</h3>
-							</div>
-							<div data-role="content" style="background-color: rgba(255,255,255,0.7);">
-								<p id="sekor" style="text-align: center;font-size: 50px;">xxxxxxxxxxx</p>
-								<br/>
-								<b>KKM = 75</b>
-							</div>
+				</div>
+				<div data-role="content" id="question2" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+				
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">3. Partikel penyusun atom terdiri dari...</p></legend>
+						<input type="radio" name="ans2" id="radio3_0" value="" />
+						<label for="radio3_0">Proton, elektron, dan neutron.</label>
+						<input type="radio" name="ans2" id="radio3_1" value="" />
+						<label for="radio3_1">Proton, elektron, dan positron.</label>
+						<input type="radio" name="ans2" id="radio3_2" value="" />
+						<label for="radio3_2">Proton, neutron, dan nukleus.</label>
+						<input type="radio" name="ans2" id="radio3_3" value="" />
+						<label for="radio3_3">Positron, nukelus, dan elektron.</label>
+						
+					</fieldset>						   
+				   <div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(2,1)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(2,3)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question3" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">4. Manakah reaksi gaya listrik berikut ini yang benar?</p></legend>
+						<input name="ans3" type="radio" id="radio4_0" value="" />
+						<label for="radio4_0">Dua partikel bermuatan negatif saling tarik menarik.</label>
+						<input type="radio" name="ans3" id="radio4_1" value="" />
+						<label for="radio4_1">Dua partikel bermuatan positif tidak bereaksi.</label>
+						<input type="radio" name="ans3" id="radio4_2" value="" />
+						<label for="radio4_2">Dua partikell bermuatan positif saling tolak menolak.</label>
+						<input type="radio" name="ans3" id="radio4_3" value="" />
+						<label for="radio4_3">Dua partikel bermuatan positif saling tarik menarik.</label>
+						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(3,2)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(3,4)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question4" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">5. Massa proton dan elektron pada atom  yang memiliki 15 proton dan 20 elektron masing-masing adalah ....<br/>(P = 1,6 x 10<sup>-27</sup> kg, E = 9,1 x 10<sup>-31</sup> kg)</p></legend>
+						<input name="ans4" type="radio" id="radio5_0" value="" />
+						<label for="radio5_0">2,4 x 10<sup>-26</sup> kg dan 1,8 x 10<sup>-29</sup> kg.</label>
+						<input type="radio" name="ans4" id="radio5_1" value="" />
+						<label for="radio5_1">1,6 x 10<sup>-28</sup> kg dan 1,8 x 10<sup>-33</sup> kg.</label>
+						<input type="radio" name="ans4" id="radio5_2" value="" />
+						<label for="radio5_2">2,4 x 10<sup>-27</sup> kg dan 1,8 x 10<sup>-31</sup> kg.</label>
+						<input type="radio" name="ans4" id="radio5_3" value="" />
+						<label for="radio5_3">1,6 x 10<sup>-25</sup> kg dan 1,8 x 10<sup>-29</sup> kg.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(4,3)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(4,5)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question5" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">6. Manakah pernyataan garis gaya listrik yang benar?</p></legend>
+						<input name="ans5" type="radio" id="radio6_0" value="" />
+						<label for="radio6_0">Garis gaya listrik berasal dari muatan negatif menuju muatan positif.</label>
+						<input type="radio" name="ans5" id="radio6_1" value="" />
+						<label for="radio6_1">Garis gaya listrik selalu lurus.</label>
+						<input type="radio" name="ans5" id="radio6_2" value="" />
+						<label for="radio6_2">Garis gaya listrik berasal dari muatan positif menuju muatan negatif.</label>
+						<input type="radio" name="ans5" id="radio6_3" value="" />
+						<label for="radio6_3">Semakin rapat garis gaya listrik semakin lemah medan listriknya.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(5,4)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(5,6)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question6" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">7. Berapakah gaya listrik yang terjadi jika sebuah atom bermuatan  -4 uC bertemu dengan atom yang bermuatan  +2 uC pada jarak 20 cm?<br/>(k=9.10<sup>9</sup> N.m<sup>2</sup>/C<sup>2</sup>)</p></legend>
+						<input name="ans6" type="radio" id="radio7_0" value="" />
+						<label for="radio7_0">1,8 N tolak menolak.</label>
+						<input type="radio" name="ans6" id="radio7_1" value="" />
+						<label for="radio7_1">1,8 N tarik menarik.</label>
+						<input type="radio" name="ans6" id="radio7_2" value="" />
+						<label for="radio7_2">3,6 tolak menolak.</label>
+						<input type="radio" name="ans6" id="radio7_3" value="" />
+						<label for="radio7_3">3,6 tarik menarik.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(6,5)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(6,7)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question7" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">8. Tiga muatan listrik berurutan A, B dan C. Jarak A dengan B 2cm jarak B dengan C 2cm. dengan  muatan A = -5 uC, muatan B = +4 uC dan muatan C = -10 uC Besar dan arah gayalistrik pada muatan B adalah...<br/>(k= 9x10<sup>9</sup> Nm<sup>2</sup>C<sup>2</sup>)</p></legend>
+						<input name="ans7" type="radio" id="radio8_0" value="" />
+						<label for="radio8_0">900 N ke kanan.</label>
+						<input type="radio" name="ans7" id="radio8_1" value="" />
+						<label for="radio8_1">900 N ke kiri.</label>
+						<input type="radio" name="ans7" id="radio8_2" value="" />
+						<label for="radio8_2">450 N ke kiri.</label>
+						<input type="radio" name="ans7" id="radio8_3" value="" />
+						<label for="radio8_3">450 N ke kanan.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(7,6)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(7,8)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question8" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">9. Manakah pernyataan berikut ini yang benar?</p></legend>
+						<input name="ans8" type="radio" id="radio9_0" value="" />
+						<label for="radio9_0">Aliran elektron mengalir dari negatif ke positif.</label>
+						<input type="radio" name="ans8" id="radio9_1" value="" />
+						<label for="radio9_1">Aliran elektron mengalir positif ke negatif.</label>
+						<input type="radio" name="ans8" id="radio9_2" value="" />
+						<label for="radio9_2">Arah arus mengalir dari negatif ke positif.</label>
+						<input type="radio" name="ans8" id="radio9_3" value="" />
+						<label for="radio9_3">Arah arus mengalir dari positif ke positif.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(8,7)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(8,9)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question9" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">10. Berapakah elektron muatan listrik yang ada pada sebuah penghantar jika penghantar tersebut memiliki arus 5 A, mengalir selama 10 detik?<br/>(1C = 6,24 x 10<sup>18</sup>) </p></legend>
+						<input name="ans9" type="radio" id="radio10_0" value="" />
+						<label for="radio10_0">3,12x10<sup>16</sup>.</label>
+						<input type="radio" name="ans9" id="radio10_1" value="" />
+						<label for="radio10_1">3,12x10<sup>-18</sup>.</label>
+						<input type="radio" name="ans9" id="radio10_2" value="" />
+						<label for="radio10_2">3,12x10<sup>20</sup>.</label>
+						<input type="radio" name="ans9" id="radio10_3" value="" />
+						<label for="radio10_3">3,12x10<sup>-18</sup>.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(9,8)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(9,10)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question10" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">11. Berapakah volume penghantar yang dilalui selama 4 detik jika kecepatan elektron adalah 20 m/s dengan luas 4 mm<sup>2</sup>?</p></legend>
+						<input name="ans10" type="radio" id="radio11_0" value="" />
+						<label for="radio11_0">3,2.10<sup>-6</sup> m<sup>3</sup>.</label>
+						<input type="radio" name="ans10" id="radio11_1" value="" />
+						<label for="radio11_1">3,2.10<sup>-5</sup> m<sup>3</sup>.</label>
+						<input type="radio" name="ans10" id="radio11_2" value="" />
+						<label for="radio11_2">3,2.10<sup>-4</sup> m<sup>3</sup>.</label>
+						<input type="radio" name="ans10" id="radio11_3" value="" />
+						<label for="radio11_3">3,2.10<sup>-2</sup> m<sup>3</sup>.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(10,9)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(10,11)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question11" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">12. Berapakah kerapatan arus pada sebuah penghantar yang berjari-jari 7 mm jika dialiri arus sebesar 77 A? <br/>(phi=22/7)</p></legend>
+						<input name="ans11" type="radio" id="radio12_0" value="" />
+						<label for="radio12_0">11 A/mm<sup>2</sup>.</label>
+						<input type="radio" name="ans11" id="radio12_1" value="" />
+						<label for="radio12_1">0,5 A/mm<sup>2</sup>.</label>
+						<input type="radio" name="ans11" id="radio12_2" value="" />
+						<label for="radio12_2">22 A/mm<sup>2</sup>.</label>
+						<input type="radio" name="ans11" id="radio12_3" value="" />
+						<label for="radio12_3">7 A/mm<sup>2</sup>.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(11,10)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(11,12)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question12" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">13. Manakah yang bukan merupakan perubahan listrik?</p></legend>
+						<input name="ans12" type="radio" id="radio13_0" value="" />
+						<label for="radio13_0">Listrik menjadi energi panas.</label>
+						<input type="radio" name="ans12" id="radio13_1" value="" />
+						<label for="radio13_1">Listrik menjadi energi magnet.</label>
+						<input type="radio" name="ans12" id="radio13_2" value="" />
+						<label for="radio13_2">Listrik menjadi energi kimia.</label>
+						<input type="radio" name="ans12" id="radio13_3" value="" />
+						<label for="radio13_3">Listrik menjadi energi kinetis.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(12,11)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(12,13)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question13" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">14. Tentukan potensial listrik pada suatu titik berjarak 1 cm dari muatan q = 5,0 μC. Konstanta Coulomb (k) = 9 x 10<sup>9</sup> Nm<sup>2</sup>C<sup>2</sup>, 1 μC = 10<sup>−6</sup> C.</p></legend>
+						<input name="ans13" type="radio" id="radio14_0" value="" />
+						<label for="radio14_0">4,5 x 10<sup>5</sup>.</label>
+						<input type="radio" name="ans13" id="radio14_1" value="" />
+						<label for="radio14_1">4,5 x 10<sup>6</sup>.</label>
+						<input type="radio" name="ans13" id="radio14_2" value="" />
+						<label for="radio14_2">4,5 x 10<sup>4</sup>.</label>
+						<input type="radio" name="ans13" id="radio14_3" value="" />
+						<label for="radio14_3">4,5 x 10<sup>-5</sup>.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(13,12)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(13,14)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question14" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">15. Sebuah lempeng penghantar berporos berada di antara magnet berkutub positif dan negatif.  Manakah pasangan posisi penghantar terhadap magnet yang benar untuk potensial listrik (emf) maksimum dan minimum?</p></legend>
+						<input name="ans14" type="radio" id="radio15_0" value="" />
+						<label for="radio15_0">posisi horizontal dan diagonal.</label>
+						<input type="radio" name="ans14" id="radio15_1" value="" />
+						<label for="radio15_1">posisi horizontal dan vertikal.</label>
+						<input type="radio" name="ans14" id="radio15_2" value="" />
+						<label for="radio15_2">posisi horizontal dan sejajar.</label>
+						<input type="radio" name="ans14" id="radio15_3" value="" />
+						<label for="radio15_3">posisi vertikal dan horizontal.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(14,13)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(14,15)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question15" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">16. Manakah yang tidak termasuk cara agar elektron berpindah?</p></legend>
+						<input name="ans15" type="radio" id="radio16_0" value="" />
+						<label for="radio16_0">Gesekan.</label>
+						<input type="radio" name="ans15" id="radio16_1" value="" />
+						<label for="radio16_1">Kimiawi.</label>
+						<input type="radio" name="ans15" id="radio16_2" value="" />
+						<label for="radio16_2">Radiasi.</label>
+						<input type="radio" name="ans15" id="radio16_3" value="" />
+						<label for="radio16_3">Induksi magnet.</label>						
+					</fieldset>				
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(15,14)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(15,16)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question16" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">17. Jika muatan A adalah 6 uC,  muatan B adalah 5 uC dan gaya coulomb yang terjadi antara muatan A dan muatan B adalah 300 N. Berapakah jarak antar muatan tersebut? (k=9.10<sup>9</sup> Nm<sup>2</sup>/C<sup>2</sup>)</p></legend>
+						<input name="ans16" type="radio" id="radio17_0" value="" />
+						<label for="radio17_0">6 cm.</label>
+						<input type="radio" name="ans16" id="radio17_1" value="" />
+						<label for="radio17_1">3 cm.</label>
+						<input type="radio" name="ans16" id="radio17_2" value="" />
+						<label for="radio17_2">9 cm.</label>
+						<input type="radio" name="ans16" id="radio17_3" value="" />
+						<label for="radio17_3">10 cm.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(16,15)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(16,17)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question17" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">18. Jika muatan A sebesar 9 uC menghasilkan gaya coulomb sebesar 360 N pada jarak 3 cm dengan muatan B. Berapakah muatan B?</p></legend>
+						<input name="ans17" type="radio" id="radio18_0" value="" />
+						<label for="radio18_0">8 uC.</label>
+						<input type="radio" name="ans17" id="radio18_1" value="" />
+						<label for="radio18_1">6 uC.</label>
+						<input type="radio" name="ans17" id="radio18_2" value="" />
+						<label for="radio18_2">4 uC.</label>
+						<input type="radio" name="ans17" id="radio18_3" value="" />
+						<label for="radio18_3">2 uC.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(17,16)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(17,18)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question18" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">19. Jika suatu bahan mempunyai jumlah elektron yang banyak dari setiap atomnya maka bahan tersebut bersifat sebagai...</p></legend>
+						<input name="ans18" type="radio" id="radio19_0" value="" />
+						<label for="radio19_0">Konduktor.</label>
+						<input type="radio" name="ans18" id="radio19_1" value="" />
+						<label for="radio19_1">Isolator.</label>
+						<input type="radio" name="ans18" id="radio19_2" value="" />
+						<label for="radio19_2">Resistor.</label>
+						<input type="radio" name="ans18" id="radio19_3" value="" />
+						<label for="radio19_3">Induktor.</label>						
+					</fieldset>					
+					<div class="ui-grid-a">
+					<div class="ui-block-a"><a data-role="button"  onClick="toggle(18,17)" data-theme="b">kembali</a></div>
+					<div class="ui-block-b"><a data-role="button"  onClick="toggle(18,19)" data-theme="a">lanjut</a></div>
+					</div>
+				</div>
+				<div data-role="content" id="question19" style="display:none">
+				<span class="">Soal Konsep Listrik</span><br>
+					<fieldset data-role="controlgroup">
+						<legend class="question"><p class="soal">20. Apakah fungsi batang arang di tengah baterai pada baterai kering?</p></legend>
+						<input name="ans19" type="radio" id="radio20_0" value="" />
+						<label for="radio20_0">Mengumpulkan proton.</label>
+						<input type="radio" name="ans19" id="radio20_1" value="" />
+						<label for="radio20_1">Memberikan neutron.</label>
+						<input type="radio" name="ans19" id="radio20_2" value="" />
+						<label for="radio20_2">Memberikan elektron.</label>
+						<input type="radio" name="ans19" id="radio20_3" value="" />
+						<label for="radio20_3">Mengumpulkan elektron.</label>						
+					</fieldset>
+					<button data-theme="a" onClick="end(19)">Selesai</button>
+				</div>
+				<div class="centerText" data-role="content" id="summary" style="display:none">
+					
+					<div id="nilaikkm" class="ui-corner-all custom-corner" style="width:200px">
+						<div data-role="header">
+							<h3>NILAI</h3>
 						</div>
-						<br/>
-						<div class="ui-corner-all custom-corner" style="width:100%" onclick="resetSoal()">
-							<div id="lulus-kkm" data-role="content" style="background-color: rgba(45,204,112,0.7);">
-								<p style="font-size: 16px; color: white;"><b>Selamat, coba kuis lainnya?</b></p>
-							</div>
-							<div id="gagal-kkm" data-role="content" style="background-color: rgba(255,44,44,0.7);">
-								<p style="font-size: 16px; color: white;"><b>Tingkatkan belajarmu! Silakan ulangi lagi kuisnya</b></p>
-							</div>
+						<div data-role="content" style="background-color: rgba(255,255,255,0.7);">
+							<p style="text-align: center;font-size: 50px;font-color=black;"><span id="result">x</span></p>
+							<br/>
+							<p style="font-size=14;font-style=bold;">KKM = 75</p>
 						</div>
-						<br/>
-						<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halaman Utama</a>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+					<div class="ui-corner-all custom-corner" style="width:100%" onclick="cobalagi()">
+						<div display="none" id="lulus" data-role="content" style="background-color: rgba(45,204,112,0.7);">
+							<p style="font-size: 16px; color: white;font-weight:bold;">Selamat, coba kuis lainnya?</p>
 						</div>
-				</center>
+						<div display="none" id="gagal" data-role="content" style="background-color: rgba(255,44,44,0.7);">
+							<p style="font-size: 16px; color: white;font-weight:bold;">Tingkatkan belajarmu! Silakan ulangi lagi kuisnya</p>
+						</div>
+					</div>
+					<br/>
+					<br/>
+					<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halaman Utama</a>					
+				</div>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
 				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" id="backQuiz">Back</a>
@@ -1004,7 +1359,37 @@
 			});
 		//});
 	</script>
-		
+	<script>
+		//0=a; 1=b; 2=c; 3=d; 4=e; 
+		correctAnswers=[3,2,0,2,0, 2,1,3,0,2, 2,1,3,1,1, 2,1,2,0,3];
+		var AnsweredCorrectly=0;
+		function start(){
+		document.getElementById('quizstart').style.display="none";
+		document.getElementById('question0').style.display="block";
+		}
+		function toggle(a,b){
+		AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?5:0);
+		document.getElementById('question'+a).style.display="none";
+		document.getElementById('question'+b).style.display="block";
+		}
+		function end(a){
+		AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?5:0);
+		document.getElementById('question'+a).style.display="none";
+		document.getElementById('summary').style.display="block";
+		document.getElementById('result').innerHTML=AnsweredCorrectly;
+		if(AnsweredCorrectly<75){
+					$('#lulus').hide();
+					$('#gagal').show();
+				}else{
+					$('#lulus').show();
+					$('#gagal').hide();
+				}
+		}
+		function cobalagi(){
+			location.reload(true);
+			AnsweredCorrectly=0;
+		}
+	</script>	
 	<script>
 		function debugKuis1() {
 			alert("OK!");
