@@ -15,21 +15,13 @@
 	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 	<script type="text/javascript" charset="utf-8">
-    // Call onDeviceReady when PhoneGap is loaded.
-    //
-    // At this point, the document has loaded but phonegap-1.0.0.js has not.
-    // When PhoneGap is loaded and talking with the native device,
-    // it will call the event `deviceready`.
-    // 
     document.addEventListener("deviceready", onDeviceReady, false);
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-    //
     function onDeviceReady() {
         // Now safe to use the PhoneGap API
 		document.getElementById("app").style.display = "initial";
     }
     </script>	
-
 	<title>Konsep Listrik</title>
 </head>
 <body>
@@ -37,12 +29,6 @@
 	   <source src="sound/lights.mp3" type="audio/mpeg" />
 	</audio>
     <div id="app" style="display:initial;">
-		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
-      		<script type="text/JavaScript">
-      			setTimeout("location.href = '#Welcome-page';",5000);
-      		</script>
-      	</div><!-- end Page--> 
-		
 		<!-- Welcome Page -->
 		<div id="Welcome-page" data-role="page" class="bg-welcome" style="text-align: center;"> 
 				<br/>
@@ -50,11 +36,9 @@
 				<h3>Selamat Datang</h3>
 				<h1>Di Media Pembelajaran</h1>
 				<h2>Konsep Listrik</h2>
-				<br/>
-					
+				<br/>					
 				<center><a href="#home-page" data-theme="d"  data-role="button" data-inline="true" data-icon="arrow-r">Masuk</a></center>
-		</div>
-				    
+		</div>				    
         <!-- Home Page -->
 		<div id="home-page" data-role="page">
 			<br/>
@@ -69,7 +53,7 @@
 							</a>
 						</li>
 						<li class="btn-menu-utama">
-							<a href="#konsep-page"  >
+							<a href="#materi-page"  >
 								<img src="img/Icon%20Materi/3%20Materi.png" alt="">
 								<h2 style="font-weight:bold">MATERI</h2>
 							</a>
@@ -126,49 +110,6 @@
 		<div  id="materi-page" data-role="page">
 			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
 				<a href="#home-page"  data-role="button" data-icon="home" data-inline="true" >Home</a>
-				<h1>Materi</h1>
-			</div>
-			<center><img id="atomic" src="img/animation.gif" style="width:100%"></center>
-			<div data-role="content" align="center">
-				<!-- Isi konten di sini -->
-				<div id="menu" style=" font-size: 12px; vertical-align: center;">
-					<ul data-role="listview">
-																	
-						<li class="btn-menu-utama">											
-							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#konsep-page" >
-								<img id="iconmateri1" src="img/Icon%20Materi/m-2-4.png" alt="">
-								<h2>Konsep Arus Listrik</h2>
-								<p>Muatan Listrik dan Fenomena Listrik Statis</p>
-								<p>Teori Atom</p>
-								<p>Fenomena Gaya Listrik</p>
-								<p>Medan Listrik</p>
-								<p>Hukum Coulomb</p>
-								<p>Arus Elektron</p>
-								<p>Besaran Nilai Arus Listrik</p>
-								<p>Sifat-sifat Arus Listrik</p>
-							</a>
-						</li>	
-						
-						<li class="btn-menu-utama">
-							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#potensialistrik-page"   >
-								<img id="iconmateri2" src="img/Icon%20Materi/m-2-4.png" alt="">
-								<h2>Potensial Listrik</h2>
-								<p>Pengertian Potensial Listrik</p>
-								<p>Pembangkitan Tegangan Listrik</p>
-							</a>
-						</li>
-																							
-					</ul>                       
-				</div>
-			</div>
-			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-			</div>
-		</div>
-
-		<div  id="konsep-page" data-role="page">
-			<div  data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
-				<a href="#home-page"  data-role="button" data-icon="home" data-inline="true" >Home</a>
 				<h1>Konsep Arus Listrik</h1>
 			</div>
 			<center><img id="atomic" src="img/animation.gif" style="width:100%"></center>
@@ -179,71 +120,61 @@
 						<li class="btn-menu-utama">
 							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#muatan-page"  >
 								<img class="listIcon"  src="img/atomIcon.png" alt="">
-								<h2>Muatan Listrik dan Fenomena Listrik Statis</h2>
-								<p></p>
+								<h2>Muatan Listrik dan Fenomena Listrik Statis</h2>					
 							</a>
 						</li>	
 						<li class="btn-menu-utama">											
 							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#teoriatom-page" >
 								<img class="listIcon" src="img/atomIcon.png" alt="">
 								<h2>Teori Atom</h2>
-								<p></p>
 							</a>
 						</li>	
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#fenomena-page"  >
 								<img class="listIcon"  src="img/medanListrik.png" alt="">
 								<h2>Fenomena Gaya Listrik</h2>
-								<p></p>
 							</a>
 						</li>	
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#medanlistrik-page"   >
 								<img class="listIcon"  src="img/medanListrik2.png" alt="">
 								<h2>Medan Listrik</h2>
-								<p></p>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#hukumCoulomb-page"   >
 								<img class="listIcon"  src="img/hukumCoulomb.png" alt="">
 								<h2>Hukum Coulomb</h2>
-								<p></p>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#arusElektron-page"   >
-								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<img class="listIcon"  src="img/arusElektron.png" alt="">
 								<h2>Arus Elektron</h2>
-								<p></p>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#besaranNilai-page"   >
-								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<img class="listIcon" src="img/arusListrik.png" alt="">
 								<h2>Besaran Nilai Arus Listrik</h2>
-								<p></p>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
 							<a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#sifatArus-page"   >
-								<img src="img/Icon%20Materi/pengertian.png" alt="">
+								<img class="listIcon"  src="img/arusListrik.png" alt="">
 								<h2>Sifat-sifat Arus Listrik</h2>
-								<p></p>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
 							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#potensial-page"  >
-								<img src="img/Icon%20Materi/pengertian.png" alt="">
-								<h3>Pengertian Potensial Listrik</h3>
-								<p></p>
+								<img class="listIcon"  src="img/potensialListrik.png" alt="">
+								<h2>Pengertian Potensial Listrik</h2>
 							</a>
 						</li>	
 						<li class="btn-menu-utama">											
 							<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#tegangan-page" >
-								<img src="img/Icon%20Materi/pengertian.png" alt="">
-								<h3>Pembangkitan Tenaga Listrik</h3>
-								<p></p>
+								<img class="listIcon" src="img/potensialListrik.png"alt="">
+								<h2>Pembangkitan Tenaga Listrik</h2>
 							</a>
 						</li>
 					</ul>                       
@@ -317,7 +248,7 @@
 				<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop. <b>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</b></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>	
 				<!-- template page -->
@@ -383,7 +314,7 @@
 					<p class="centerText">Gambar 1.5 susunan atom hidrogen dan helium</p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 		
@@ -448,7 +379,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 		
@@ -481,7 +412,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 		
@@ -539,7 +470,7 @@
 				<p class="centerText" >Gambar 1.12 struktur atom bermuatan positif</p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>	
 		
@@ -583,7 +514,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 		
@@ -641,7 +572,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>	
 		
@@ -695,7 +626,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>	
 		
@@ -773,7 +704,7 @@
 				<p></p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 
@@ -840,7 +771,7 @@
 				</p>
 			</div>
 			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-				<a href="#konsep-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<a href="#materi-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
 		
